@@ -146,7 +146,7 @@ body{
 
   font-family:'Libre Baskerville', serif;
   font-size: 8vw;
-  color:gold;
+  color:#E5D286;
   font-weight: bold;  
 }
 a.containerButton{
@@ -211,7 +211,7 @@ div.desc1-1 {
   top: 65%;
   left: 10%;
   font-size: 3vw;
-  color:gold;
+  color:#E5D286;
 }
 div.desc1-2{
   position: absolute;
@@ -249,7 +249,7 @@ div.desc3-2{
   top: 78%;
   left: 10%;
   font-size: 1.5vw;
-  color:gold;
+  color:#E5D286;
 }
 /*---------------------------------NewsLetter------------------*/
 .letter{
@@ -314,7 +314,7 @@ a:hover.index-memberBtn {
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: gold;
+  color: #E5D286;
   font-weight: bold;
   font-size: 18px;
   transition: 1s ease;
@@ -354,7 +354,7 @@ a:hover.index-memberBtn {
   height: 10px;
   width: 10px;
   margin: 0 4px;
-  background-color: gold;
+  background-color: #E5D286;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
