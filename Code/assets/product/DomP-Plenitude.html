@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Lato|Libre+Baskerville&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="site-style.css">
+	<link rel="stylesheet" type="text/css" href="DomP-PlenitudeCart.css">
+</head>
+
+<body>
+<div id="site-menu">
+	<img id="site-closeBtn" src="btn_menu-close.png" alt="Close Menu" onclick="closeMenu()"></a>
+	<div class="site-nav">
+		<a href="DomP-PlenitudeCart.html">Vintages</a>|<a href="LifeWDom.html">Life w Dom</a>|<a href="#">Our Spirit</a>|<a href="#">House Members</a>
+	</div>
+</div>
+
+<div id="site-header">
+	<img id="site-burger" src="btn_menu-hamburger.png" alt="Open Menu" onclick="openMenu()">
+	<a href="index.html"><img class="site-domLogo" src="logo_domPerignon.png" alt="Dom Perignon"></a>
+</div>
+
+<div id="site-main">
+<!--PAGE CONTENT STARTS HERE-->
+
+<div class = "row">
+<div class = "column" id = "p2-maincolumn">
+	<div class = "row">   
+		<h1>Plénitude 2</h1>
+  			<button id= "buttonInfo", class="button">Info</button>|<button id= "buttonBuy", class="button">Buy</button>
+	</div>
+
+	<div class = "row" id = "p2-infobox">
+		<div class = "column">
+  			<h3 id = "h3-p2">Dom Perignon elevated to its second life</h3>
+			<p id ="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		</div>
+
+		<div class = "column">
+  			<select id="vintage">
+  				<option value="Selectvintage">Select A Vintage Year</option>
+   				<option value="1998">1998</option>
+    			<option value="1999">1999</option>
+    			<option value="2000">2000</option>
+    			<option id="2001" value="2001">2001</option>
+  			</select>
+  			<br>
+
+  			<select id="quantity">
+   				<option value="SelectBottle">Select Quantity</option>
+   				<option value="1">1</option>
+    			<option value="2">2</option>
+    			<option value="3">3</option>
+    			<option value="4">4</option>
+  			</select>
+
+        <button id= "addtocart">Add to Cart</button>
+  		</div>
+  	</div>
+</div>
+
+<div class = "column" id = "p2-maincolumn">
+	<img src="img_bottle.png">
+</div>
+</div>
+
+  		<!-- ADD IN MAELISS' CODE HERE -->
+
+  		 <div class = "row" id = "LennyEdition">
+
+            <div class = "column" id = "p2-footer-lennyheader">
+                <h1 id = "p2-lennyheader"> Limited Edition Lenny Kravitz Label</h1>
+            </div>
+
+            <div class = "column" id = "p2-lennypara">
+                <p>
+                    Lenny Kravitz elevates the iconic Dom Pérignon label with the creation of limited editions of the Vintage 2008 and Rosé Vintage 2006.
+                </p>
+                
+            </div>
+
+            <div class = "column" id = "p2-lennybutton">
+                <img src= "kravitz_white.png" width= 145px height=130px>
+                    <div class = "row">
+                        <button> Read More </button>
+                    </div>
+            </div>
+
+        </div>
+
+<!--PAGE CONTENT ENDS HERE-->
+</div>
+<div class="site-footer">
+	<a href="index.html">Home</a>|<a href="#">About</a>|<a href="DomP-PlenitudeCart.html">Product</a>|<a href="LifeWDom.html">Sponsored Artists &amp; Events</a>|<a href="#">Membership</a>|<a href="#">Contact Us</a>|<a href="#">Languages</a>|<a href="#">Legal</a>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec accumsan tellus. In quis elit vel tortor eleifend tempus.</p>
+</div>
+
+<!--JAVASCRIPT-->
+
+<script>
+	function openMenu() {
+  		document.getElementById("site-menu").style.height = "88px";
+		}
+	function closeMenu() {
+  		document.getElementById("site-menu").style.height = "0px";
+		}
+    
+      var buttonInfo = document.querySelector("#buttonInfo"); 
+      var buttonBuy = document.querySelector("#buttonBuy");
+
+      var buttonBuy = document.querySelector("#buttonBuy");
+
+      var description = document.querySelector("#description");
+      var vintage = document.querySelector("#vintage");
+      var quantity = document.querySelector("#quantity");
+      var addtocart = document.querySelector("#addtocart");
+      var shoppingcart= [0,0,0,0];
+
+      buttonInfo.addEventListener("click", changeText); 
+      buttonBuy.addEventListener("click", changeText);
+      addtocart.addEventListener("click", addtoCart);
+
+
+      function changeText ()
+      {
+
+        if (this.id == "buttonInfo")
+        {
+          description.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat";
+
+          vintage.style.display = "none";
+          quantity.style.display = "none";
+          addtocart.style.display = "none";
+
+        }
+
+        else if (this.id == "buttonBuy")
+        {
+          description.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+
+          vintage.style.display = "inline";
+          quantity.style.display = "inline";
+          addtocart.style.display = "inline";
+        } 
+      } 
+
+      function addtoCart ()
+      {
+        if(quantity.selectedIndex =="0" || vintage.selectedIndex=="0"){
+          alert("Please select the quantity and the vintage bottle");
+        }
+        else if (vintage.selectedIndex == "1"){
+          shoppingcart[0] += parseInt(quantity.value);
+          alert("You added " +quantity.value +" bottle(s) of 1998 to your cart");
+        }
+        else if (vintage.selectedIndex == "2"){
+          shoppingcart[1] += parseInt(quantity.value);
+          alert("You added " +quantity.value +" bottle(s) of 1999 to your cart");
+          
+        }
+        else if (vintage.selectedIndex == "3"){
+          shoppingcart[2] += parseInt(quantity.value);
+          alert("You added " +quantity.value +" bottle(s) of 2000 to your cart");
+          
+        }
+        else if (vintage.selectedIndex == "4"){
+          shoppingcart[3] += parseInt(quantity.value);
+          alert("You added " +quantity.value +" bottle(s) of 2001 to your cart");
+          
+        }         
+
+      }
+</script>
+
+</body>
+</html>

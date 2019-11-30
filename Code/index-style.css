@@ -1,0 +1,184 @@
+.index-products {
+	height:488px;
+	width:1034px;
+	text-align:center;
+	color:white;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:40px;
+}
+.index-products h2 {
+	margin-bottom:0;
+}
+.index-products p {
+	font-size:14px;
+	margin-top:6px;
+}
+#index-prod01 {
+	width:33%;
+	padding:224px 60px 0px;
+	background:url(assets/index/bg_vintage.jpg);
+}
+#index-prod02 {
+	width:33%;
+	padding:224px 60px 0px;
+	background:url(assets/index/bg_plenitude.jpg);
+}
+#index-prod03 {
+	width:33%;
+	padding:224px 60px 0px;
+	background:url(assets/index/bg_rose.jpg);
+}
+.index-lifeWDom {
+	background:url(assets/index/bg_lifeWDom.jpg);
+	width:1034px;
+	height:330px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:40px;
+	color:white;
+}
+.index-lifeContent {
+	float:right;
+	margin:68px 40px;
+  	width:480px;
+}
+.index-membership {
+	background:url(assets/index/bg_houseMember.jpg);
+	width:1034px;
+	height:185px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:40px;
+	color:white;
+}
+.index-newsletter {
+	font-size:12px;
+}
+a.index-memberBtn {
+	background-color:black;
+  	border-radius: 15px;
+  	margin-right:6px;
+	padding:6px 14px;
+	font-family: 'Libre Baskerville', serif;
+	font-size:12px;
+	color:white;
+	text-decoration: none;
+}
+a:hover.index-memberBtn {
+	background-color:#E5D286;
+	color:black;
+}
+.index-newsletter a {
+	color:white;
+}
+.index-newsletter a:hover {
+	color:black;
+}
+
+
+
+
+
+
+/* ROOZBEH'S CAROUSEL */
+/*------------------------------------------SLIDESHOW-----------------*/
+/* Slideshow container */
+.slideshow-container {
+  width: 100vw;
+  height: 600px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides
+{
+  height:100%;
+  width: 100%%;
+}
+
+/* Hide the images by default */
+.mySlides img {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #E5D286;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 1s ease;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	color:#746522;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  position: relative;
+  top: -50px; 
+  left: 0px;
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 0 8px 12px 0;
+  background-color: #E5D286;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #746522;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+/* END ROOZBEH'S CAROUSEL */
+
+
