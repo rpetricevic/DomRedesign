@@ -1,47 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Lato|Libre+Baskerville&display=swap" rel="stylesheet">
 
-<html id = "theWebsite">
-	<head>
-		<title>Life w Dom</title>
-	<link rel="stylesheet" type="text/css" href="dom.css">
-	</head>
-	<body>
+	<link rel="stylesheet" type="text/css" href="life.css">
+</head>
+
+<body>
+<div id="site-menu">
+	<img id="site-closeBtn" src="assets/btn_menu-close.png" alt="Close Menu" onclick="closeMenu()"></a>
+	<div class="site-nav">
+		<a href="DomP-PlenitudeCart.html">Vintages</a>|<a href="LifeWDom.html">Life w Dom</a>|<a href="#">Our Spirit</a>|<a href="#">House Members</a>
+	</div>
+</div>
+
+<div id="site-header">
+	<img id="site-burger" src="assets/btn_menu-hamburger.png" alt="Open Menu" onclick="openMenu()">
+	<a href="index.html"><img class="site-domLogo" src="assets/logo_domPerignon.png" alt="Dom Perignon"></a>
+</div>
+<div id="site-main">
+<!--PAGE CONTENT STARTS HERE-->
 
 
-		<ul id="homeBar">
-		  <li id ="barItem"><a href="default.asp">Dom Perignon</a></li>
-		  <li id ="barItem" id ="barItem"><a href="news.asp">News</a></li>
-		  <li id ="barItem"><a href="contact.asp">Contact</a></li>
-		  <li id ="barItemUser" style="float:right"><a class="active" href="#about">About</a></li>
-		</ul> 
-
-
+	<!-------------------------------- Life w Dom container -------------------------->
 	<div class="container">
 
-		<img src="dom4.PNG" style="width: 100%">
-		<div class="leftCentered">LIFE W DOM</div>
+		<img src="assets/life/img_feature.jpg" >
+		<div class="containerText" style="  top: 20%; left: 5%; color: white;">LIFE W DOM</div>
+	    <div class="containerText" style="left: 10%; top:40%; font-size: 2vw; color: white;"> How your life can be different with DOM </div>
 	</div>
-	<!--<h1>My Favorite TV Shows</h1> -->
-	<!-- Slideshow container -->
+
+
+
+
+	<!-------------------------------- Slideshow ---------------------------------->
 
 	<div class="slideshow-container">
 
 	  <!-- Full-width images with number and caption text -->
 	  <div class="mySlides fade">
 	    
-	    <img src="dom1.PNG" style="width:100%">
-	    <!--<div class="text">Lenny</div> -->
+	    <img src="assets/life/carousel01.jpg" style="width:100%">
+	    <div class="containerText" style="left: 45%; top:25%; font-size: 3vw; color: white;"> Dom Pergnon + Louis Vuitton </div>
+
+	    <div class="containerText" style="left: 45%; top:35%; font-size: 5vw; color: gold;"> FASHION WEEK </div>
+	    <a class="containerButton" style="left: 45%; top: 64%">Learn more</a>
+	    <div class="containerText" style="left: 45%; top:53%; font-size: 1.5vw; color: white;"> Louis Vuitton's collaboration with the Dom </div>
+
+
+
 	  </div>
 
 	  <div class="mySlides fade">
 	   
-	    <img src="dom2.PNG" style="width:100%">
-	    
+	    <img src="assets/life/carousel02.jpg" style="width:100%">
+	    <div class="containerText" style="left: 10%; top:10%;"> DOM X TOILETPAPER </div>
 	  </div>
 
 	  <div class="mySlides fade">
 	    
-	    <img src="dom3.PNG" style="width:100%">
+	    <img src="assets/life/carousel03.jpg" style="width:100%">
+	    <div class="containerText" style="left: 55%; top:30%;"> Two Men </div>
 	    <!--<div class="text">Letter</div>-->
 	  </div>
 
@@ -58,55 +78,92 @@
 	  <span class="dot" onclick="currentSlide(3)"></span> 
 	</div>
 
+
+	<!---------------------------------LENNY------------------------------------------------>
 	<div class="container">
 
-		<img src="dom5.PNG" style="width: 80%">
-		<div class="leftCentered">LENNY </div>
+		<img src="assets/life/bg_lenny.jpg" style="width: 90%;">
+		<div class="containerText" style="left: 15%; top:10%; font-size: 4.5vw;">Lenny Kravitz </div>
+	    <div class="containerText" style="left: 15%; top:28%; font-size: 2vw; color: white;">Creative Director </div>
+	    <a class="containerButton" style="left: 15%; top: 68%">Learn more</a>
+	    <div class="containerText" style="left: 61.5%; top:60%; font-size: 1vw; color: white; transform: translate(-120%, -120%);text-align: left;">Learn more about our lovely Lenny, the inspiration for many Dom Pergnon bottles. Lenny is the hero, Lenny is the king, Lenny is the man.</div>
+
 	</div>
-
-	<div class="container" id ="letter">
-
-		<img class="letter" src="dom-LETTER.PNG" style="width: 80%">
-		
-	</div>
-
-
-    <!-- Gallery photos -->
+ 
+ 	<!-------------------------------- Gallery photos ----------------------------------------->
     <div class = "gallery-parent">
 		<div class="gallery">
-		  <a href="https://www.google.com/?client=safari">
-		    <img src="dom-gal1.png" alt="Cinque Terre" width="600" height="400">
+		  <a href="https://www.google.com/">
+		    <img src="assets/life/bg_humery.jpg">
 		  </a>
-		  <div class="desc">Add a description of the image here</div>
+		  <div class="desc1-1">Thomas Humery</div>
+		  <div class="desc1-2">Photographer</div>
 		</div>
 
 		<div class="gallery">
 		  <a>
-		    <img src="dom-gal2.png" alt="Forest" width="600" height="400">
+		    <img src="assets/life/bg_silence.jpg">
 		  </a>
-		  <div class="desc">Add a description of the image here</div>
+		  <div class="desc2-1">Silence! The Party</div>
+		  <div class="desc2-2">Dom Pergnon X Toiletpaper Magazine</div>
 		</div>
 
 		<div class="gallery">
 		  <a>
-		    <img src="dom-gal3.png" alt="Northern Lights" width="600" height="400">
+		    <img src="assets/life/bg_bach.jpg">
 		  </a>
-		  <div class="desc">Add a description of the image here</div>
+		  <div class="desc3-1" color="black">Bach Studies</div>
+		  <div class="desc3-2">Three modern dance movements</div>
+
 		</div>
 	</div>
 
-	<!--NewsLetter-->
+	<!-------------------------------- NewsLetter -------------------------------------------->
+	<div class="container" id ="letter"></div>	
+
+<div class="index-membership" style="width: 70vw;">
+	<table>
+		<tr>
+			<td style="width:200px;padding:30px 30px 0;"><img src="assets/index/logo_houseMember.png" alt="House Membership"></td>
+			<td style="padding-right:280px;">
+				<p>Join Dom P&eacute;rignon's membership program< to access exclusive content on the site and earn rewards like invitations to our sponsored events.</p>
+				<p>Are you a restauranteur or sommelier? Become a certified member!</p>
+				<a href="#" class="index-memberBtn">Become a member.</a> <span class="index-newsletter">Or <a href="#">sign up</a> for our FREE monthly newsletter!</span>
+			</td>
+		</tr>
+	</table>
+</div>
+
+
+		
+
+
+
+	<!------------------------------------------------------------------------------------------>
 
 
 
 
 
 
-	</body>
-	<script>
 
 
-		var letter = document.querySelector("#letter");
+
+
+
+
+
+<!--PAGE CONTENT ENDS HERE-->
+</div>
+<div class="site-footer">
+	<a href="index.html">Home</a>|<a href="#">About</a>|<a href="DomP-PlenitudeCart.html">Product</a>|<a href="LifeWDom.html">Sponsored Artists &amp; Events</a>|<a href="#">Membership</a>|<a href="#">Contact Us</a>|<a href="#">Languages</a>|<a href="#">Legal</a>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec accumsan tellus. In quis elit vel tortor eleifend tempus.</p>
+</div>
+
+<!--JAVASCRIPT-->
+
+<script>
+	var letter = document.querySelector("#letter");
         letter.addEventListener("click", letterClick);
 
 
@@ -118,13 +175,12 @@
 			  } else {
 			    txt = "Hello " + person;
 			  }
-			  document.getElementById("barItemUser").innerHTML = txt;
-			  document.getElementById("barItemUser").innerHTML = white;
 
         }
         //------------------------slideshow
-		var slideIndex = 1;
+		var slideIndex = 0;
 		showSlides(slideIndex);
+		loopSlides();
 
 		// Next/previous controls
 		function plusSlides(n) {
@@ -150,8 +206,35 @@
 		  }
 		  slides[slideIndex-1].style.display = "block"; 
 		  dots[slideIndex-1].className += " active";
+
 		}
-	</script>
+
+		function loopSlides() {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+		  for (i = 0; i < slides.length; i++) {
+		    slides[i].style.display = "none";  
+		  }
+		  slideIndex++;
+		  if (slideIndex > slides.length) {slideIndex = 1}    
+		  for (i = 0; i < dots.length; i++) {
+		    dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		  setTimeout(loopSlides, 5000); // Change image every 2 seconds
+		}
 
 
+
+	function openMenu() {
+  		document.getElementById("site-menu").style.height = "88px";
+		}
+	function closeMenu() {
+  		document.getElementById("site-menu").style.height = "0px";
+		}
+</script>
+
+</body>
 </html>

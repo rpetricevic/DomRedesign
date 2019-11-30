@@ -1,0 +1,383 @@
+body {
+  font-family:'Lato', sans-serif;
+  background:url('assets/bg_site.jpg');
+  margin:0;
+  padding:0;
+}
+h1 {
+  font-family:'Libre Baskerville', serif;
+  font-size:42px;
+}
+h2 {
+  font-family:'Libre Baskerville', serif;
+  font-size:36px;
+}
+.life {
+  font-family:'Bebas Neue', cursive;
+}
+#site-header {
+  background-color: black;
+  width:100%;
+  height:88px;
+  margin-top:0; /* required */
+  padding:20px;
+  position:fixed;
+  z-index:2;
+}
+#site-menu {
+  background-color:#8D7E3B;
+  height:0;
+    width:100%;
+    margin-left:0;
+  margin-top:0;
+  position:fixed;
+  overflow-x:hidden;
+  transition:0.5s;
+  z-index:3;
+}
+.site-nav {
+    text-align:center;
+    padding-top:32px;
+  font-family:'Libre Baskerville', serif;
+  color:#746522;
+}
+.site-nav a {
+  color:#000;
+  text-decoration:none;
+  margin-left:12px;
+  margin-right:12px;
+}
+.site-nav a:hover {
+  color:#E5D286;
+}
+#site-burger {
+  position:absolute;
+  cursor:pointer;
+  right:66px;
+  padding:14px;
+}
+#site-closeBtn {
+  position:absolute;
+  cursor:pointer;
+  right:14px;
+  padding:32px;
+}
+img.site-domLogo {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+#site-main {
+  padding-top:88px;
+}
+a.site-basicBtn {
+  background-color:#8D7E3B;
+  border-radius:15px;
+  padding:6px 14px;
+  font-family:'Libre Baskerville', serif;
+  font-size:10px;
+  color:white;
+  text-decoration: none;
+}
+a:hover.site-basicBtn {
+  background-color:#E5D286;
+  color:black;
+}
+.site-footer {
+  height:200px;
+  background:white;
+  color:lightgrey;
+  text-align:center;
+  padding-top:40px;
+}
+.site-footer a {
+  font-family:'Libre Baskerville', serif;
+  font-size:11px;
+  color:#E5D286;
+  text-decoration:none;
+  margin-left:12px;
+  margin-right:12px;
+}
+.site-footer a:hover {
+  color:#746522;
+}
+.site-footer p {
+  margin-top:12px;
+  font-style:italic;
+  font-size:9px;
+}
+/*---------------------------------------------------------------LIFE w DOM--------------------------------------------*/
+body{
+  font-family:'Lato', sans-serif;
+  background:url('assets/bg_site.jpg');
+  margin:0;
+  padding:0;
+}
+
+
+#theWebsite{
+    font-family:'Lato', sans-serif;
+}
+
+
+* {box-sizing:border-box}
+
+
+
+/* --------------------Container for adding text on top of image */
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  text.size: 100;
+  height: 30%;
+}
+.container img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.containerText{
+  position: absolute;
+  top: 20%;
+  left: 25%;
+
+  font-family:'Libre Baskerville', serif;
+  font-size: 8vw;
+  color:gold;
+  font-weight: bold;  
+}
+a.containerButton{
+  position: absolute;
+  background-color:#8D7E3B;
+  border-radius:15px;
+  padding:6px 14px;
+  font-family:'Libre Baskerville', serif;
+  font-size:10px;
+  color:white;
+  text-decoration: none;
+}
+.containerImg{
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  width:  5vw;
+
+  object-fit: cover;
+}
+a:hover.containerButton {
+  background-color:#E5D286;
+  color:black;
+  cursor: pointer;
+}
+
+/*-----------------------------------------IMAGE GALLERY ---------*/
+/*div.gallery-parent{
+	margin-left: 10%;
+
+
+}
+ */
+div.gallery {
+  position: relative;
+  
+}
+
+
+div.gallery-parent
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.gallery
+{
+
+}
+
+
+div.gallery img {
+
+  width:30vw;
+  object-fit: cover;
+}
+
+/*First Gallery image*/
+div.desc1-1 {
+  position: absolute;
+  top: 65%;
+  left: 10%;
+  font-size: 3vw;
+  color:gold;
+}
+div.desc1-2{
+  position: absolute;
+  top: 78%;
+  left: 10%;
+  font-size: 1.5vw;
+  color:white;
+  
+}
+/*Second Gallery image*/
+div.desc2-1 {
+  position: absolute;
+  top: 65%;
+  left: 10%;
+  font-size: 3vw;
+  color:black;
+}
+div.desc2-2{
+  position: absolute;
+  top: 78%;
+  left: 10%;
+  font-size: 1.5vw;
+  color:white;
+}
+/*Third Gallery image*/
+div.desc3-1 {
+  position: absolute;
+  top: 65%;
+  left: 10%;
+  font-size: 3vw;
+  color:white;
+}
+div.desc3-2{
+  position: absolute;
+  top: 78%;
+  left: 10%;
+  font-size: 1.5vw;
+  color:gold;
+}
+/*---------------------------------NewsLetter------------------*/
+.letter{
+  margin-top: 10vh;
+	cursor: pointer;
+}
+.index-membership {
+  margin-top:10vh;
+  background:url(assets/index/bg_houseMember.jpg);
+  width:1034px;
+  height:185px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:40px;
+  color:white;
+}
+.index-newsletter {
+  font-size:12px;
+}
+a.index-memberBtn {
+  background-color:black;
+    border-radius: 15px;
+    margin-right:6px;
+  padding:6px 14px;
+  font-family: 'Libre Baskerville', serif;
+  font-size:12px;
+  color:white;
+  text-decoration: none;
+}
+a:hover.index-memberBtn {
+  background-color:#E5D286;
+  color:black;
+}
+
+
+/*------------------------------------------SLIDESHOW-----------------*/
+.slideshow-container {
+  width: 100vw;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides
+{
+  height:100%;
+  width: 100%%;
+}
+
+/* Hide the images by default */
+.mySlides img {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: gold;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 1s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  position: relative;
+  top: -50px; 
+  left: 0px;
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 4px;
+  background-color: gold;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
