@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html id = "theWebsite">
+	<head>
+		<title>Life w Dom</title>
+	<link rel="stylesheet" type="text/css" href="dom.css">
+	</head>
+	<body>
+
+
+		<ul id="homeBar">
+		  <li id ="barItem"><a href="default.asp">Dom Perignon</a></li>
+		  <li id ="barItem" id ="barItem"><a href="news.asp">News</a></li>
+		  <li id ="barItem"><a href="contact.asp">Contact</a></li>
+		  <li id ="barItemUser" style="float:right"><a class="active" href="#about">About</a></li>
+		</ul> 
+
+
+	<div class="container">
+
+		<img src="dom4.PNG" style="width: 100%">
+		<div class="leftCentered">LIFE W DOM</div>
+	</div>
+	<!--<h1>My Favorite TV Shows</h1> -->
+	<!-- Slideshow container -->
+
+	<div class="slideshow-container">
+
+	  <!-- Full-width images with number and caption text -->
+	  <div class="mySlides fade">
+	    
+	    <img src="dom1.PNG" style="width:100%">
+	    <!--<div class="text">Lenny</div> -->
+	  </div>
+
+	  <div class="mySlides fade">
+	   
+	    <img src="dom2.PNG" style="width:100%">
+	    
+	  </div>
+
+	  <div class="mySlides fade">
+	    
+	    <img src="dom3.PNG" style="width:100%">
+	    <!--<div class="text">Letter</div>-->
+	  </div>
+
+	  <!-- Next and previous buttons -->
+	  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+	<br>
+
+	<!-- The dots/circles -->
+	<div style="text-align:center">
+	  <span class="dot" onclick="currentSlide(1)"></span> 
+	  <span class="dot" onclick="currentSlide(2)"></span> 
+	  <span class="dot" onclick="currentSlide(3)"></span> 
+	</div>
+
+	<div class="container">
+
+		<img src="dom5.PNG" style="width: 80%">
+		<div class="leftCentered">LENNY </div>
+	</div>
+
+	<div class="container" id ="letter">
+
+		<img class="letter" src="dom-LETTER.PNG" style="width: 80%">
+		
+	</div>
+
+
+    <!-- Gallery photos -->
+    <div class = "gallery-parent">
+		<div class="gallery">
+		  <a href="https://www.google.com/?client=safari">
+		    <img src="dom-gal1.png" alt="Cinque Terre" width="600" height="400">
+		  </a>
+		  <div class="desc">Add a description of the image here</div>
+		</div>
+
+		<div class="gallery">
+		  <a>
+		    <img src="dom-gal2.png" alt="Forest" width="600" height="400">
+		  </a>
+		  <div class="desc">Add a description of the image here</div>
+		</div>
+
+		<div class="gallery">
+		  <a>
+		    <img src="dom-gal3.png" alt="Northern Lights" width="600" height="400">
+		  </a>
+		  <div class="desc">Add a description of the image here</div>
+		</div>
+	</div>
+
+	<!--NewsLetter-->
+
+
+
+
+
+
+	</body>
+	<script>
+
+
+		var letter = document.querySelector("#letter");
+        letter.addEventListener("click", letterClick);
+
+
+        function letterClick(){
+        	  var txt;
+			  var person = prompt("Please enter your name:", "Lenny");
+			  if (person == null || person == "") {
+			    txt = "User cancelled the prompt.";
+			  } else {
+			    txt = "Hello " + person;
+			  }
+			  document.getElementById("barItemUser").innerHTML = txt;
+			  document.getElementById("barItemUser").innerHTML = white;
+
+        }
+        //------------------------slideshow
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		// Next/previous controls
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		// Thumbnail image controls
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1} 
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		      slides[i].style.display = "none"; 
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		      dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block"; 
+		  dots[slideIndex-1].className += " active";
+		}
+	</script>
+
+
+</html>
