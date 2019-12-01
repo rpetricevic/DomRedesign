@@ -28,19 +28,32 @@
 <!--PAGE CONTENT STARTS HERE-->
 
 
-<div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Login</h1>
 
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <button type="submit" class="btn">Login</button>
-    <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
+<!--MODAL FORM-->
+<div id="site-modal">
+	<div class="site-modalContent">
+		<span class="site-modalClose">&times;</span>
+		<h2>Membership Form</h2>
+		<p>Vivamus dui tellus, tincidunt non ipsum in, sagittis pretium libero. Nam sem risus, tincidunt eget mauris a, aliquet facilisis lectus</p>
+		<p><span style="color:red;">*</span> Field is required</p>
+		<form>
+			<h3>Name:</h3>
+  			<input type="text" name="name" class="site-modalTextField">
+  			<h3>Email Address: <span style="color:red;">*</span></h3>
+  			<input type="text" name="email" class="site-modalTextField" required>
+  			<h3>Food Allergies:</h3>
+  			<table>
+  				<tr>
+  					<td><input type="checkbox" name="allergies" value="none" checked> None</td>
+  					<td><input type="checkbox" name="allergies" value="peanuts"> Peanuts</td>
+  					<td><input type="checkbox" name="allergies" value="dairy"> Dairy</td>
+  					<td><input type="checkbox" name="allergies" value="broccoli"> Broccoli</td>
+  				</tr>
+  			</table>
+  			<input type="submit" value="Submit" class="site-modalSubmit"><br>
+  			&nbsp;
+		</form>
+	</div>
 </div>
 
 
@@ -49,9 +62,9 @@
 <div class="index-carousel">
 	<div class="index-carSlide">
 		<div class="index-carContent">
-		<h1>One</h1>
+		<h1>Lenny Kravitz Signature Label Bottles</h1>
 		<p>Duis volutpat est ut erat tempor sollicitudin. Suspendisse a faucibus dui. Fusce lobortis nulla eget ante luctus imperdiet. In hac habitasse platea dictumst. Vivamus aliquam lorem eu metus auctor, a eleifend massa tempor.</p>
-		<a href="#" class="index-button">Learn More</a>
+		<a href="#" class="index-button" id="site-modalBtn">Learn More</a>
 		</div>
 	</div>
 	<div class="index-carSlide">
@@ -77,9 +90,9 @@
 	</div>
 	<div class="index-carSlide">
 		<div class="index-carContent">
-		<h1>Lenny Kravitz Signature Label Bottles</h1>
+		<h1>Five</h1>
 		<p>Duis volutpat est ut erat tempor sollicitudin. Suspendisse a faucibus dui. Fusce lobortis nulla eget ante luctus imperdiet. In hac habitasse platea dictumst. Vivamus aliquam lorem eu metus auctor, a eleifend massa tempor.</p>
-		<a href="#" class="index-button" onclick="openForm()">Learn More</a>
+		<a href="#" class="index-button">Learn More</a>
 		</div>
 	</div>
 
@@ -162,7 +175,7 @@
 		}
 
 	//CAROUSEL
-	var slideNum = 0;
+	var slideNum = 1;
 	showSlide(slideNum);
 
 	//Equations to determine the next and previous slides
@@ -181,22 +194,31 @@
 			if (n < 1) {slideNum = slides.length}
 			for (i = 0; i < slides.length; i++) {
 			    slides[i].style.display = "none";
-			}
+				}
 			for (i = 0; i < dots.length; i++) {
 			    dots[i].className = dots[i].className.replace(" dotActive", "");
+				}
+				slides[slideNum-1].style.display = "block";
+				dots[slideNum-1].className += " dotActive";
+		}
+
+	//MODAL FORM
+	var modal = document.getElementById("site-modal");
+	var openBtn = document.getElementById("site-modalBtn");
+	var closeSpan = document.getElementsByClassName("site-modalClose")[0];
+
+	openBtn.onclick = function() {
+		modal.style.display = "block";
+		}
+
+	closeSpan.onclick = function() {
+		modal.style.display = "none";
+		}
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
 			}
-			slides[slideNum-1].style.display = "block";
-			dots[slideNum-1].className += " dotActive";
 		}
-
-	//POPUP FORM
-	function openForm() {
-  		document.getElementById("myForm").style.display = "block";
-		}
-	function closeForm() {
-  		document.getElementById("myForm").style.display = "none";
-		}
-
 </script>
 
 </body>
