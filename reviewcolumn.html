@@ -3,13 +3,17 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Membership Exclusives</title>
-	<link rel="stylesheet" type="text/css" href="reviewcolumn.css">
+	<link rel="stylesheet" type="text/css" href="userreviews.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script>
 		function disappearBar()
 		{
 			document.querySelector('#become-member').style.display="none";
 		}
+		function myFunction() {
+	  	alert("Hello! I am an alert box!");
+		}
+
 	</script>
 </head>
 <body>
@@ -62,7 +66,8 @@
 			<a href="#" class="button">Read More</a>
 	</div>
 
-	<div id="become-member" onclick="disappearBar()">Become a Dom Perignon House Member to gain access to exclusive content!</div>
+	<div id="become-member" onclick="disappearBar()" onclick="myFunction()">Become a Dom Perignon House Member to gain access to exclusive content!</div>
+
 </div>
 </body>
 </html>

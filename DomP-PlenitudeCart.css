@@ -5,9 +5,7 @@
 
 #p2-mainrow {
   padding-top: 50px;
-  padding-right: 100px;
-  padding-bottom: 50px;
-  padding-left: 80px;
+  padding-left: 15vw;
 }
 
 h1 {
@@ -31,20 +29,16 @@ p {
 #p2-maincolumn {
 	float: left;	
   	align-content: center;	
-  	width: 45%;
-  	padding: 5px;
-  	padding-top: 70px;
-    padding-right: 50px;
+  	width: 40%;
+  	padding-top: 10%;
+    padding-right: 5vw;
   	text-align: left;
-    border-color: green;
-    border-width: 5px;
 }
 
 #p2-infobox {
 	float: left;	
   	align-content: left;	
   	width: 100%;
-  	padding-right: 50px;
   	text-align: left;
 
 }
@@ -63,12 +57,9 @@ p {
 }
 
 #LennyEdition {
-  background-image: url("lennyEfooter.png");
+  background-image: url("assets/product/bg_assemblage.jpg");
   background-position: center;
-  background-size: stretch; 
-  padding-top: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
+  background-size: contain; 
 }
 
 #p2-lennyheader {
@@ -84,7 +75,7 @@ p {
   float: left;	
   align-content: center;	
   width: 30%;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
 
 }
@@ -100,6 +91,35 @@ p {
 @media screen and (max-width:100%) {
   .column {
     width: 100%;
+
+/*Maeliss' Code*/
+
+{
+  box-sizing: content-box;
+}
+
+img{margin: 5px; float:center;}
+
+ {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 19%;
+  padding: 5px;
+  column-rule-style: dotted;
+  column-rule-color: #9b8632;
+} 
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
 
 
 
