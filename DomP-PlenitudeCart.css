@@ -59,7 +59,7 @@ button:hover.site-basicBtn {
 }
 
 select.p2-dropdown {
-   background-color:#8D7E3B;
+  background-color:#8D7E3B;
   border-radius:15px;
   padding:6px 14px;
   font-family:'Libre Baskerville', serif;
@@ -74,9 +74,9 @@ select.p2-dropdown {
   background-size: contain; 
 }
 
-#p2-lennyheader {
+h1.p2-lennyheader {
 	font-family:'Libre Baskerville', serif;
-	font-size:40px;
+	font-size:15px;
 	color: white;
 }
 
@@ -130,16 +130,10 @@ img{margin: 5px; float:center;}
   display: table;
 }
 
-
-/* ADD IN MAELISS CODE*/
-
 {
   box-sizing: border-box;
 }
 
-h1{margin-left: 12%; text-align: left;font-family: PlantagenetCherokee ;color:#000000; font-size: 24px;}
-h2{text-align: left;font-family: PlantagenetCherokee ;color:#000000; font-size: 20px;}
-h3{font-family: PlantagenetCherokee;font-weight: lighter; color:#ffffff; text-align: left; font-size: 14px}
 {
   box-sizing: border-box;
 }
@@ -148,12 +142,9 @@ h3{font-family: PlantagenetCherokee;font-weight: lighter; color:#ffffff; text-al
 {
   width: 80vw;
   height: auto;
-
   margin: 0 auto;
-
   border: 2px solid #9b8632;
   position: relative;
-
 
 }
   
@@ -176,7 +167,7 @@ h3{font-family: PlantagenetCherokee;font-weight: lighter; color:#ffffff; text-al
   background-color:#9b8632;
 }
 
-.pairings-column {
+.column {
   
   width:25%;
   padding: 25px;
@@ -190,9 +181,7 @@ h3{font-family: PlantagenetCherokee;font-weight: lighter; color:#ffffff; text-al
 .column p
 {
   width: 90%;
-  
   height: 40%;
-
   overflow: hidden; 
 }
 
@@ -208,10 +197,7 @@ h3{font-family: PlantagenetCherokee;font-weight: lighter; color:#ffffff; text-al
   text-align: center;
   border-radius: 30px;
   box-shadow: 0px 0px 4px rgba(0,0,0,0.5);
-  
-
   background-color: white;
-
   cursor:pointer;
 }
 
