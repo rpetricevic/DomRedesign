@@ -9,23 +9,27 @@
   margin-bottom:40px;
 }
 .index-carPrev, .index-carNext {
-  cursor: pointer;
-  position: absolute;
+  cursor:pointer;
+  position:absolute;
   top:45%;
   width:auto;
   margin-top: -22px;
-  padding: 16px;
+  padding:16px;
   color:#8D7E3B;
-  font-weight: bold;
-  border-radius: 0 3px 3px 0;
-  font-size: 18px;
+  border-radius:0 3px 3px 0;
+  font-size:24px;
 }
 .index-carNext {
   right:0px;
-  border-radius: 3px 0 0 3px;
+  border-radius:3px 0 0 3px;
+}
+.index-dotNav {
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
 }
 .index-carDot {
-  position: relative;
+  position:relative;
   top:-80px; 
   left:0px;
   cursor:pointer;
@@ -41,11 +45,23 @@
 }
 .index-carContent {
   width:35%;
-  height:100%;
   float:right;
-  margin-right:100px;
-  padding-top:auto;
-  padding-bottom:auto;
+  margin-right:140px;
+  padding-top:88px;
+}
+a.index-button {
+  background-color:black;
+  border-radius: 15px;
+  margin-right:6px;
+  padding:6px 14px;
+  font-family: 'Libre Baskerville', serif;
+  font-size:12px;
+  color:white;
+  text-decoration: none;
+}
+a:hover.index-button {
+  background-color:#E5D286;
+  color:black;
 }
 
 /* VINTAGES */
@@ -59,6 +75,7 @@
 }
 .index-indvProd {
   width:33%;
+  min-width:888px;
   padding-bottom:40px;
 }
 .index-indvProd h2 {
@@ -108,20 +125,6 @@
 }
 .index-newsletter {
 	font-size:12px;
-}
-a.index-memberBtn {
-	background-color:black;
-  border-radius: 15px;
-  margin-right:6px;
-	padding:6px 14px;
-	font-family: 'Libre Baskerville', serif;
-	font-size:12px;
-	color:white;
-	text-decoration: none;
-}
-a:hover.index-memberBtn {
-	background-color:#E5D286;
-	color:black;
 }
 .index-newsletter a {
 	color:white;
