@@ -49,6 +49,9 @@
   margin-right:140px;
   padding-top:88px;
 }
+@media screen and (max-width: 900px) {
+  .index-carContent h1 {font-size:22px;}
+}
 a.index-button {
   background-color:black;
   border-radius: 15px;
