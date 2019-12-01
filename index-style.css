@@ -1,10 +1,51 @@
 /* CAROUSEL */
 .index-carousel {
-  background:url(assets/index/carousel01.jpg);
-  background-position:center;
-  background-size:cover;
+  position: relative;
+  margin: auto;
+}
+.index-carSlide {
+  background-color:white;
   height:541px;
   margin-bottom:40px;
+}
+.index-carPrev, .index-carNext {
+  cursor: pointer;
+  position: absolute;
+  top:45%;
+  width:auto;
+  margin-top: -22px;
+  padding: 16px;
+  color:#8D7E3B;
+  font-weight: bold;
+  border-radius: 0 3px 3px 0;
+  font-size: 18px;
+}
+.index-carNext {
+  right:0px;
+  border-radius: 3px 0 0 3px;
+}
+.index-carDot {
+  position: relative;
+  top:-80px; 
+  left:0px;
+  cursor:pointer;
+  height:8px;
+  width:8px;
+  margin:0 4px;
+  background-color:#8D7E3B;
+  border-radius:50%;
+  display:inline-block;
+}
+.dotActive, .dot:hover {
+  background-color:#746522;
+}
+.index-carContent {
+  width:35%;
+  height:100%;
+  float:right;
+  margin-right:100px;
+  padding-top:auto;
+  padding-bottom:auto;
 }
 
 /* VINTAGES */

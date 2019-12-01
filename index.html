@@ -31,6 +31,52 @@
 
 <!--CAROUSEL-->
 <div class="index-carousel">
+	<div class="index-carSlide">
+		<div class="index-carContent">
+		<h1>Lenny Kravitz Signature Label</h1>
+		<p>Duis volutpat est ut erat tempor sollicitudin. Suspendisse a faucibus dui. Fusce lobortis nulla eget ante luctus imperdiet. In hac habitasse platea dictumst. Vivamus aliquam lorem eu metus auctor, a eleifend massa tempor.</p>
+		<a href="#" class="site-basicBtn">Learn More</a>
+		</div>
+	</div>
+	<div class="index-carSlide">
+		<div class="index-carContent">
+		<h1>TWO</h1>
+		<p>Duis volutpat est ut erat tempor sollicitudin. Suspendisse a faucibus dui. Fusce lobortis nulla eget ante luctus imperdiet. In hac habitasse platea dictumst. Vivamus aliquam lorem eu metus auctor, a eleifend massa tempor.</p>
+		<a href="#" class="site-basicBtn">Learn More</a>
+		</div>
+	</div>
+	<div class="index-carSlide">
+		<div class="index-carContent">
+		<h1>THREE</h1>
+		<p>Duis volutpat est ut erat tempor sollicitudin. Suspendisse a faucibus dui. Fusce lobortis nulla eget ante luctus imperdiet. In hac habitasse platea dictumst. Vivamus aliquam lorem eu metus auctor, a eleifend massa tempor.</p>
+		<a href="#" class="site-basicBtn">Learn More</a>
+		</div>
+	</div>
+	<div class="index-carSlide">
+		<div class="index-carContent">
+		<h1>FOUR</h1>
+		<p>Duis volutpat est ut erat tempor sollicitudin. Suspendisse a faucibus dui. Fusce lobortis nulla eget ante luctus imperdiet. In hac habitasse platea dictumst. Vivamus aliquam lorem eu metus auctor, a eleifend massa tempor.</p>
+		<a href="#" class="site-basicBtn">Learn More</a>
+		</div>
+	</div>
+	<div class="index-carSlide">
+		<div class="index-carContent">
+		<h1>FIVE</h1>
+		<p>Duis volutpat est ut erat tempor sollicitudin. Suspendisse a faucibus dui. Fusce lobortis nulla eget ante luctus imperdiet. In hac habitasse platea dictumst. Vivamus aliquam lorem eu metus auctor, a eleifend massa tempor.</p>
+		<a href="#" class="site-basicBtn">Learn More</a>
+		</div>
+	</div>
+
+	<a class="index-carPrev" onclick="nextSlide(-1)">&#10094;</a>
+	<a class="index-carNext" onclick="nextSlide(1)">&#10095;</a>
+
+	<div style="text-align:center">
+	  <span class="index-carDot" onclick="currentSlide(1)"></span>
+	  <span class="index-carDot" onclick="currentSlide(2)"></span>
+	  <span class="index-carDot" onclick="currentSlide(3)"></span>
+	  <span class="index-carDot" onclick="currentSlide(4)"></span>
+	  <span class="index-carDot" onclick="currentSlide(5)"></span>
+	</div>
 </div>
 
 
@@ -91,12 +137,43 @@
 
 <!--JAVASCRIPT-->
 <script>
+	//MENU
 	function openMenu() {
   		document.getElementById("site-menu").style.height = "88px";
 		}
 	function closeMenu() {
   		document.getElementById("site-menu").style.height = "0px";
 		}
+
+	//CAROUSEL
+	var slideNum = 0;
+	showSlide(slideNum);
+
+	//Equations to determine the next and previous slides
+	function nextSlide(n) {
+  		showSlide(slideNum += n);
+  		}
+  	function currentSlide(n) {
+  		showSlide(slideNum = n);
+		}
+
+	function showSlide(n) {
+		var i;
+		var slides = document.getElementsByClassName("index-carSlide");
+		var dots = document.getElementsByClassName("index-carDot");
+			if (n > slides.length) {slideNum = 1}
+			if (n < 1) {slideNum = slides.length}
+			for (i = 0; i < slides.length; i++) {
+			    slides[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+			    dots[i].className = dots[i].className.replace(" dotActive", "");
+			}
+			slides[slideNum-1].style.display = "block";
+			dots[slideNum-1].className += " dotActive";
+		}
+
+
 </script>
 
 </body>
