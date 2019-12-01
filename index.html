@@ -44,12 +44,12 @@
   			<h3>Food Allergies:</h3>
   			<table>
   				<tr>
-  					<td><input type="checkbox" name="allergies" value="peanuts"> Peanuts</td>
+  					<td><input type="checkbox" name="allergies" value="peanuts" id="nuts"> Peanuts</td>
   					<td><input type="checkbox" name="allergies" value="dairy"> Dairy</td>
   					<td><input type="checkbox" name="allergies" value="broccoli"> Broccoli</td>
   				</tr>
   			</table>
-  			<input type="submit" value="Submit" class="site-modalSubmit"><br>
+  			<input type="submit" value="Submit" class="site-modalSubmit" onclick="checkPeanuts()"><br>
   			&nbsp;
 		</form>
 	</div>
@@ -147,8 +147,9 @@
 <!--MEMBERSHIP-->
 <div class="index-membership">
 	<img src="assets/index/logo_houseMember.png" alt="House Membership"></td>
-	<p>Join Dom P&eacute;rignon's membership program to access exclusive content on the site and earn rewards like invitations to our sponsored events.</p>
-	<p>Are you a restauranteur or sommelier? Become a certified member!</p>
+	<p>Join Dom P&eacute;rignon's membership program to access exclusive content on the site and earn rewards like invitations to our sponsored events.Nunc sodales tempus ipsum sit amet dignissim. Nulla tincidunt aliquam neque, id tempor arcu interdum eu. Nam euismod tincidunt pharetra. Quisque eleifend iaculis euismod. Sed maximus id risus et scelerisque. Fusce maximus diam vel ipsum sagittis vulputate.</p>
+	<p id="current">Are you a restauranteur or sommelier? Become a certified member!</p>
+	<p id="new" style="display:none">PEANUTS PEANUTS PEANUTS PEANUTS!</p>
 	<a href="#" class="index-button" id="site-modalBtn">Become a member.</a> <span class="index-newsletter">Sign up for our FREE monthly newsletter!</span>
 </div>
 
@@ -193,10 +194,10 @@
 			if (n < 1) {slideNum = slides.length}
 			for (i = 0; i < slides.length; i++) {
 			    slides[i].style.display = "none";
-				}
+			}
 			for (i = 0; i < dots.length; i++) {
 			    dots[i].className = dots[i].className.replace(" dotActive", "");
-				}
+			}
 				slides[slideNum-1].style.display = "block";
 				dots[slideNum-1].className += " dotActive";
 		}
@@ -208,16 +209,29 @@
 
 	openBtn.onclick = function() {
 		modal.style.display = "block";
-		}
+	}
 
 	closeSpan.onclick = function() {
 		modal.style.display = "none";
-		}
+	}
 	window.onclick = function(event) {
 		if (event.target == modal) {
 			modal.style.display = "none";
 			}
-		}
+	}
+	function checkPeanuts() {
+		var checkBox = document.getElementById("nuts");
+		var textCur = document.getElementById("current");
+		var textNew = document.getElementById("new");
+		if (checkBox.checked == true){
+			textCur.style.display = "none";
+			textNew.style.display = "block";
+			modal.style.display = "none"
+  		} else {
+    		textNew.style.display = "none";
+    		textCur.style.display = "block";
+  		}
+	}
 </script>
 
 </body>
