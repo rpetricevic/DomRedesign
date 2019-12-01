@@ -23,7 +23,6 @@
 <!--PAGE CONTENT STARTS HERE-->
 
 <body id = "p2-body">
-<button id= "buttonCart">showCart</button>
 <div class = "row" id = "p2-mainrow">
 <div class = "column" id = "p2-maincolumn">
 	<div class = "row">   
@@ -56,6 +55,8 @@
   			</select>
 
         <button id= "addtocart">Add to Cart</button>
+
+<button id= "buttonCart">showCart</button>
   		</div>
   	</div>
 </div>
@@ -127,18 +128,21 @@
       function showCart(){
         var cartInfo = "";
         if(shoppingcart[0] != 0){
-          cartInfo = cartInfo + "You have " + shoppingcart[0] + " bottles of 1998 \n";
+          cartInfo = cartInfo + "You have " + shoppingcart[0] + " bottle(s) of 1998 \n";
         }
-        if(shoppingcart[1] != 0){
-          cartInfo = cartInfo + "You have " + shoppingcart[1] + " bottles of 1999 \n";
+        else if(shoppingcart[1] != 0){
+          cartInfo = cartInfo + "You have " + shoppingcart[1] + " bottle(s) of 1999 \n";
         }
-        if(shoppingcart[2] != 0){
-          cartInfo = cartInfo + "You have " + shoppingcart[2] + " bottles of 2000 \n";
+        else if(shoppingcart[2] != 0){
+          cartInfo = cartInfo + "You have " + shoppingcart[2] + " bottle(s) of 2000 \n";
         }
-        if(shoppingcart[3] != 0){
-          cartInfo = cartInfo + "You have " + shoppingcart[3] + " bottles of 2001 \n";
+        else if(shoppingcart[3] != 0){
+          cartInfo = cartInfo + "You have " + shoppingcart[3] + " bottle(s) of 2001 \n";
         }
-        cartInfo += "In your cart";
+
+        else{
+          cartInfo +="Your cart is empty";
+        }
         alert(cartInfo);      
       }
       function changeText ()
@@ -151,6 +155,7 @@
           vintage.style.display = "none";
           quantity.style.display = "none";
           addtocart.style.display = "none";
+          buttonCart.style.display = "none";
 
         }
 
@@ -161,6 +166,7 @@
           vintage.style.display = "inline";
           quantity.style.display = "inline";
           addtocart.style.display = "inline";
+          buttonCart.style.display = "inline";
         } 
       } 
 
