@@ -1,64 +1,77 @@
+/* CAROUSEL */
+.index-carousel {
+  background:url(assets/index/carousel01.jpg);
+  background-position:center;
+  background-size:cover;
+  height:541px;
+  margin-bottom:40px;
+}
+
+/* VINTAGES */
 .index-products {
-	height:488px;
-	width:1034px;
-	text-align:center;
-	color:white;
-	margin-left:auto;
-	margin-right:auto;
-	margin-bottom:40px;
+	display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  margin:0 40px 40px 40px;
 }
-.index-products h2 {
-	margin-bottom:0;
+.index-indvProd {
+  width:33%;
+  padding-bottom:40px;
 }
-.index-products p {
-	font-size:14px;
-	margin-top:6px;
+.index-indvProd h2 {
+  margin:0 0 14px;
 }
-#index-prod01 {
-	width:33%;
-	padding:224px 60px 0px;
-	background:url(assets/index/bg_vintage.jpg);
+.index-indvProd p {
+  font-size:14px;
+  padding:0 24%;
 }
-#index-prod02 {
-	width:33%;
-	padding:224px 60px 0px;
-	background:url(assets/index/bg_plenitude.jpg);
-}
-#index-prod03 {
-	width:33%;
-	padding:224px 60px 0px;
-	background:url(assets/index/bg_rose.jpg);
-}
+
+/* LIFE w DOM */
 .index-lifeWDom {
 	background:url(assets/index/bg_lifeWDom.jpg);
-	width:1034px;
+  background-position:left;
+  background-repeat:no-repeat;
+  background-color:black;
 	height:330px;
-	margin-left:auto;
-	margin-right:auto;
-	margin-bottom:40px;
+	margin:0 44px 40px 44px;
 	color:white;
+}
+@media screen and (max-width: 1100px) {
+  .index-lifeWDom {background-position:right;}
 }
 .index-lifeContent {
-	float:right;
-	margin:68px 40px;
-  	width:480px;
+  float:right;
+	margin:68px 80px;
+  width:50%;
 }
+@media screen and (max-width: 600px) {
+  .index-lifeContent {float:left;margin:48px 20px;width:80%;}
+}
+
+/* MEMBERSHIP */
 .index-membership {
 	background:url(assets/index/bg_houseMember.jpg);
-	width:1034px;
-	height:185px;
-	margin-left:auto;
-	margin-right:auto;
-	margin-bottom:40px;
+  background-position:right;
+  background-repeat:no-repeat;
+  background-color:#9B8633;
+	height:145px;
+	margin:0 44px 40px 44px;
+  padding:20px 60px 20px 20px;
 	color:white;
+}
+.index-membership img {
+  float:left;
+  margin:10px 30px 0 0;
 }
 .index-newsletter {
 	font-size:12px;
 }
 a.index-memberBtn {
 	background-color:black;
-  	border-radius: 15px;
-  	margin-right:6px;
+  border-radius: 15px;
+  margin-right:6px;
 	padding:6px 14px;
 	font-family: 'Libre Baskerville', serif;
 	font-size:12px;
@@ -75,117 +88,3 @@ a:hover.index-memberBtn {
 .index-newsletter a:hover {
 	color:black;
 }
-
-
-/* MY CAROUSEL */
-.index-carousel {
-  background:url(assets/index/carousel01.jpg);
-  width:1080px;
-  height:541px;
-}
-
-/* END MY CAROUSEL */
-
-
-
-/* ROOZBEH'S CAROUSEL */
-/*------------------------------------------SLIDESHOW-----------------*/
-/* Slideshow container */
-.slideshow-container {
-  width: 100vw;
-  height: 600px;
-  position: relative;
-  margin: auto;
-}
-
-.mySlides
-{
-  height:100%;
-  width: 100%%;
-}
-
-/* Hide the images by default */
-.mySlides img {
-  width:100%;
-  height:100%;
-  object-fit: cover;
-  object-position: 50% 50%;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: #E5D286;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 1s ease;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-	color:#746522;
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-
-
-/* The dots/bullets/indicators */
-.dot {
-  position: relative;
-  top: -50px; 
-  left: 0px;
-  cursor: pointer;
-  height: 8px;
-  width: 8px;
-  margin: 0 8px 12px 0;
-  background-color: #E5D286;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #746522;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-  animation-name: fade;
-  animation-duration: 1s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-/* END ROOZBEH'S CAROUSEL */
-
-

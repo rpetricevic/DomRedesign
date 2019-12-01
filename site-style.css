@@ -1,6 +1,11 @@
+html {
+	position:relative;
+}
 body {
 	font-family:'Lato', sans-serif;
 	background:url('assets/bg_site.jpg');
+	background-repeat:no-repeat;
+	background-color:#070707;
 	margin:0;
 	padding:0;
 }
@@ -12,11 +17,10 @@ h2 {
 	font-family:'Libre Baskerville', serif;
 	font-size:36px;
 }
-.life {
-	font-family:'Bebas Neue', cursive;
-}
+
+/* HEADER */
 #site-header {
-	background-color: black;
+	background-color:black;
 	width:100%;
 	height:48px;
 	margin-top:0; /* required */
@@ -24,6 +28,13 @@ h2 {
 	position:fixed;
 	z-index:1;
 }
+img.site-domLogo {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/* NAVIGATION AND MENU */
 #site-menu {
 	background-color:#8D7E3B;
 	height:0;
@@ -40,6 +51,9 @@ h2 {
   	padding-top:32px;
 	font-family:'Libre Baskerville', serif;
 	color:#746522;
+}
+@media screen and (max-width: 600px) {
+  .site-nav {font-size:12px;}
 }
 .site-nav a {
 	color:#000;
@@ -59,17 +73,18 @@ h2 {
 #site-closeBtn {
 	position:absolute;
 	cursor:pointer;
-	right:14px;
+	right:10px;
 	padding:32px;
 }
-img.site-domLogo {
-	display:block;
+
+/* MAIN CONTENT AREA */
+#site-main {
 	margin-left:auto;
 	margin-right:auto;
-}
-#site-main {
 	padding-top:88px;
 }
+
+/* STANDARD BUTTON */
 a.site-basicBtn {
 	background-color:#8D7E3B;
   	border-radius:15px;
@@ -83,12 +98,14 @@ a:hover.site-basicBtn {
 	background-color:#E5D286;
 	color:black;
 }
+
+/* FOOTER */
 .site-footer {
-	height:200px;
+	height:100px;
 	background:white;
 	color:lightgrey;
 	text-align:center;
-	padding-top:40px;
+	padding:40px;
 }
 .site-footer a {
 	font-family:'Libre Baskerville', serif;
