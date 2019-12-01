@@ -2,41 +2,49 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<title>Dom Pérignon</title>
+  	<meta name="author" content="Stefan Grambart">
+  	<meta name="description" content="MDM Student website redesign">
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Lato|Libre+Baskerville&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="site-style.css">
 	<link rel="stylesheet" type="text/css" href="DomP-PlenitudeCart.css">
 </head>
-
 <body>
+
+<!--NAVIGATION AND MENU-->
 <div id="site-menu">
 	<img id="site-closeBtn" src="assets/btn_menu-close.png" alt="Close Menu" onclick="closeMenu()"></a>
 	<div class="site-nav">
-		<a href="DomP-PlenitudeCart.html">Vintages</a>|<a href="LifeWDom.html">Life w Dom</a>|<a href="#">Our Spirit</a>|<a href="#">House Members</a>
+		<a href="DomP-PlenitudeCart.html">Vintages</a>|<a href="LifeWDom.html">Life w Dom</a>|<a href="#">Our Spirit</a>|<a href="#">Members</a>
 	</div>
 </div>
 
+<!--HEADER-->
 <div id="site-header">
 	<img id="site-burger" src="assets/btn_menu-hamburger.png" alt="Open Menu" onclick="openMenu()">
-	<a href="index.html"><img class="site-domLogo" src="assets/logo_domPerignon.png" alt="Dom Perignon"></a>
+	<a href="index.html"><img class="site-domLogo" src="assets/logo_domPerignon.png" alt="Dom Pérignon"></a>
 </div>
+
 <div id="site-main">
+<!-- new header -->
+
 <!--PAGE CONTENT STARTS HERE-->
 
 <body id = "p2-body">
-<div class = "row" id = "p2-mainrow">
-<div class = "column" id = "p2-maincolumn">
-	<div class = "row">   
-		<h1 id = "p2-h1">Plénitude 2</h1>
-  			<button id= "buttonInfo", class= "site-basicBtn">Info</button>|<button id= "buttonBuy", class= "site-basicBtn">Buy</button>
-	</div>
+	<!-- <div class = "p2-mainrow"> -->
+		<div class = "p2-maincolumn">
+				<h1 class = "p2-h1">Plénitude 2</h1>
+  				<button id= "buttonInfo", class= "site-basicBtn">Info</button>|<button id= "buttonBuy", class= "site-basicBtn">Buy</button>
+		</div>
+	<!-- </div> -->
 
-	<div class = "row" id = "p2-infobox">
-		<div class = "column">
-  			<h3 class = "h3" id = "h3-p2">Dom Perignon elevated to its second life</h3>
+	<div class = "p2-row">
+		<div class = "p2-infocolumn">
+  			<h3 class = "p2-h3" id = "h3-p2">Dom Perignon elevated to its second life</h3>
 			<p id ="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 		</div>
 
-		<div class = "column">
+		<div class = "p2-infocolumn">
   			<select id="vintage" class = "p2-dropdown">
   				<option value="Selectvintage">Select A Vintage Year</option>
    				<option value="1998">1998</option>
@@ -53,29 +61,35 @@
     			<option value="3">3</option>
     			<option value="4">4</option>
   			</select>
-  <br/><br/>
-        <button id= "addtocart" class = "site-basicBtn">Add to Cart</button>
-        <br/><br/>
+ 			 <br/><br/>
+        	
+        	<button id= "addtocart" class = "site-basicBtn">Add to Cart</button>
 
-<button id= "buttonCart" class= "site-basicBtn">showCart</button>
+       		 <br/><br/>
+
+			<button id= "buttonCart" class= "site-basicBtn"> Show Cart</button>
   		</div>
-  	</div>
 </div>
 
-<div class = "column" id = "p2-maincolumn">
-	<img src="assets/product/img_bottle.png">
-</div>
+	<div class = "p2-maincolumn" id = "p2-maincolumn">
+		<img src="assets/product/img_bottle.png">
+	</div>
 </div>
 
   		<!-- ADD IN MAELISS' CODE HERE -->
 
-
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Membership Exclusives</title>
+	<link rel="stylesheet" type="text/css" href="reviewcolumn.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script>
 		function disappearBar()
 		{
 			document.querySelector('#become-member').style.display="none";
+		}
+		function myFunction() {
+	  	alert("Hello! I am an alert box!");
 		}
 	</script>
 </head>
@@ -116,7 +130,7 @@
 			</p>
 			<a href="#" class="site-basicBtn">Read More</a>
 			  </div>
-			  <div class="column" id = "pairing-column">
+			  <div class="column">
 			    <h2>Food Pairings</h2>
 			    <h3> Amelia Collector</h3>
 			    <span class="fa fa-star"></span>
@@ -129,33 +143,30 @@
 			<a href="#" class="site-basicBtn">Read More</a>
 	</div>
 
-	<div id="become-member" onclick="disappearBar()">Become a Dom Perignon House Member to gain access to exclusive content!</div>
+	<div id="become-member" onclick="disappearBar()" onclick="myFunction()">Become a Dom Perignon House Member to gain access to exclusive content!</div>
+
 </div>
+</div>
+</body>
 
   		<!-- END MAELISS CODE -->
 
-  		 <div class = "row" id = "LennyEdition">
+  		<div class = "lennyfooter-row" id ="LennyEdition">
+  			<div class = "lenny-column" id ="p2-footer-lennyheader">
+  				<h3 class = "p2-lennyheader"> Limited Edition Lenny Kravitz Label</h3>
+  			</div>
 
-            <div class = "column" id = "p2-footer-lennyheader">
-                <h1 id = "p2-lennyheader"> Limited Edition Lenny Kravitz Label</h1>
-            </div>
+  			<div class = "lenny-column" id ="p2-footer-lennyheader">
+  				<p class = "p2-p">Lenny Kravitz elevates the iconic Dom Pérignon label with the creation of limited editions of the Vintage 2008 and Rosé Vintage 2006.</p>
+  			</div>
 
-            <div class = "column" id = "p2-lennypara">
-                <p>
-                    Lenny Kravitz elevates the iconic Dom Pérignon label with the creation of limited editions of the Vintage 2008 and Rosé Vintage 2006.
-                </p>
-                
-            </div>
-
-            <div class = "column" id = "p2-lennybutton">
-                <img src= "assets/kravitz_white.png" width= 145px height=130px>
-                    <div class = "row">
-                        <button class = "site-basicBtn"> Read More </button>
-                    </div>
-            </div>
-
-        </div>
-
+  			<div class = "lenny-column" id ="p2-footer-lennyheader">
+  				<img src = "assets/kravitz_white.png"> </img>
+  				<div class = "lenny-row">
+  					<button class = "site-basicBtn"> Read More </button>
+  				</div>
+  			</div>
+  		</div>
 
 </body>
 
