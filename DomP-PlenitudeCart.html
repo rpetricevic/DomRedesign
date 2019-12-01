@@ -23,7 +23,7 @@
 <!--PAGE CONTENT STARTS HERE-->
 
 <body id = "p2-body">
-
+<button id= "buttonCart">showCart</button>
 <div class = "row" id = "p2-mainrow">
 <div class = "column" id = "p2-maincolumn">
 	<div class = "row">   
@@ -67,17 +67,6 @@
 
   		<!-- ADD IN MAELISS' CODE HERE -->
 
-  	<div class="row">
-		<div class="column">
-		<img src="holding glass.jpg" alt="holding champagne glass" style="width:100%;">
-	</div>
-	<div class="column">
-		<img src="tray of champagne.jpg" alt="tray of champagne" style="width:100%;">
-	</div>
-	<div class="column">
-		<img src="a toast.jpg" alt="a toast" style="width:100%">
-	</div>
-
   		 <div class = "row" id = "LennyEdition">
 
             <div class = "column" id = "p2-footer-lennyheader">
@@ -100,6 +89,7 @@
 
         </div>
 
+
 </body>
 
 
@@ -119,11 +109,9 @@
 	function closeMenu() {
   		document.getElementById("site-menu").style.height = "0px";
 		}
-
       var buttonInfo = document.querySelector("#buttonInfo"); 
       var buttonBuy = document.querySelector("#buttonBuy");
-
-      var buttonBuy = document.querySelector("#buttonBuy");
+      var buttonCart = document.querySelector("#buttonCart");
 
       var description = document.querySelector("#description");
       var vintage = document.querySelector("#vintage");
@@ -132,11 +120,27 @@
       var shoppingcart= [0,0,0,0];
 
       buttonInfo.addEventListener("click", changeText); 
+      buttonCart.addEventListener("click",showCart);
       buttonBuy.addEventListener("click", changeText);
       addtocart.addEventListener("click", addtoCart);
-      shoppingcart.addEventListener("click", updatecart);
 
-
+      function showCart(){
+        var cartInfo = "";
+        if(shoppingcart[0] != 0){
+          cartInfo = cartInfo + "You have " + shoppingcart[0] + " bottles of 1998 \n";
+        }
+        if(shoppingcart[1] != 0){
+          cartInfo = cartInfo + "You have " + shoppingcart[1] + " bottles of 1999 \n";
+        }
+        if(shoppingcart[2] != 0){
+          cartInfo = cartInfo + "You have " + shoppingcart[2] + " bottles of 2000 \n";
+        }
+        if(shoppingcart[3] != 0){
+          cartInfo = cartInfo + "You have " + shoppingcart[3] + " bottles of 2001 \n";
+        }
+        cartInfo += "In your cart";
+        alert(cartInfo);      
+      }
       function changeText ()
       {
 
@@ -185,11 +189,6 @@
           
         }         
 
-      }
-
-      function updatecart {
-
-      	
       }
 </script>
 
