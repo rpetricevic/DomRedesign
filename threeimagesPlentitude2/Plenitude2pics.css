@@ -1,0 +1,23 @@
+{
+	box-sizing: content-box;
+}
+
+img{margin: 5px; float:center;}
+
+ {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 19%;
+  padding: 5px;
+  column-rule-style: dotted;
+  column-rule-color: #9b8632;
+} 
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
