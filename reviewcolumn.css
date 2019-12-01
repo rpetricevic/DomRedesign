@@ -1,4 +1,4 @@
-body
+.member-exclusives-body
 {
 	margin: 0;
 }
@@ -8,7 +8,7 @@ body
 	box-sizing: border-box;
 }
 
-h1{margin-left: 12%; text-align: left;font-family: PlantagenetCherokee ;color:#000000; font-size: 24px;}
+h1{margin-left: 12%; text-align: left;font-family: PlantagenetCherokee ;color:#ffffff; font-size: 24px;}
 h2{text-align: left;font-family: PlantagenetCherokee ;color:#000000; font-size: 20px;}
 h3{font-family: PlantagenetCherokee;font-weight: lighter; color:#ffffff; text-align: left; font-size: 14px}
 {
@@ -61,9 +61,7 @@ h3{font-family: PlantagenetCherokee;font-weight: lighter; color:#ffffff; text-al
 .column p
 {
 	width: 90%;
-	
 	height: 40%;
-
 	overflow: hidden;	
 }
 
@@ -117,7 +115,7 @@ h3{font-family: PlantagenetCherokee;font-weight: lighter; color:#ffffff; text-al
 
 .paragraph {
 	font-size: 16px;
-    font-family: PlantagenetCherokee;
+    font-family: Lato;
     color: #ffffff;
 }
 
