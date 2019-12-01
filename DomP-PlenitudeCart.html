@@ -67,6 +67,17 @@
 
   		<!-- ADD IN MAELISS' CODE HERE -->
 
+  	<div class="row">
+		<div class="column">
+		<img src="holding glass.jpg" alt="holding champagne glass" style="width:100%;">
+	</div>
+	<div class="column">
+		<img src="tray of champagne.jpg" alt="tray of champagne" style="width:100%;">
+	</div>
+	<div class="column">
+		<img src="a toast.jpg" alt="a toast" style="width:100%">
+	</div>
+
   		 <div class = "row" id = "LennyEdition">
 
             <div class = "column" id = "p2-footer-lennyheader">
@@ -89,7 +100,6 @@
 
         </div>
 
-
 </body>
 
 
@@ -109,6 +119,7 @@
 	function closeMenu() {
   		document.getElementById("site-menu").style.height = "0px";
 		}
+
       var buttonInfo = document.querySelector("#buttonInfo"); 
       var buttonBuy = document.querySelector("#buttonBuy");
 
@@ -123,6 +134,7 @@
       buttonInfo.addEventListener("click", changeText); 
       buttonBuy.addEventListener("click", changeText);
       addtocart.addEventListener("click", addtoCart);
+      shoppingcart.addEventListener("click", updatecart);
 
 
       function changeText ()
@@ -173,6 +185,11 @@
           
         }         
 
+      }
+
+      function updatecart {
+
+      	
       }
 </script>
 
