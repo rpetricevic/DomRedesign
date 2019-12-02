@@ -3,11 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Dom Pérignon</title>
-  	<meta name="author" content="Stefan Grambart">
+  	<meta name="author" content="">
   	<meta name="description" content="MDM Student website redesign">
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Lato|Libre+Baskerville&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="site-style.css">
 	<link rel="stylesheet" type="text/css" href="P2-revamp.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="reviewcolumn.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -27,6 +30,25 @@
 
 <div id="site-main">
 <!--PAGE CONTENT STARTS HERE-->
+
+<!-- MODAL FORM -->
+<div id="site-modal">
+	<div class="site-modalContent">
+		<span class="site-modalClose">&times;</span>
+		<h2>Membership Form</h2>
+		<p>Vivamus dui tellus, tincidunt non ipsum in, sagittis pretium libero. Nam sem risus, tincidunt eget mauris a, aliquet facilisis lectus</p>
+			<h3>Name:</h3>
+  			<input type="text" name="name" class="site-modalTextField">
+  			<h3>Email Address:</h3>
+  			<input type="text" name="email" class="site-modalTextField">
+  			&nbsp;<br>
+  			<h3>Food Allergies? <input type="checkbox" id="allergies"></h3>
+  			<input type="button" value="Submit" class="site-modalSubmit" id="submit"><br>
+  			&nbsp;
+	</div>
+</div>
+
+<!--  -->
 
 <body id = "p2-body">
 
@@ -98,21 +120,10 @@
 
 <!-- MEMBERS REVIEWS -->
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Membership Exclusives</title>
-	<link rel="stylesheet" type="text/css" href="reviewcolumn.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script>
-		function disappearBar()
-		{
-			document.querySelector('#become-member').style.display="none";
-		}
-		function myFunction() {
-	  	alert("Hello! I am an alert box!");
-		}
-	</script>
+	
+
 </head>
-<body class = "member-exclusives-body">
+<div class = "member-exclusives-body">
 
 <div id="mainrow-wrapper">
 
@@ -162,11 +173,11 @@
 				<a href="#" class="site-basicBtn">Read More</a>
 			</div>
 
-	<div id="become-member" onclick="disappearBar()" onclick="myFunction()">Become a Dom Perignon House Member to gain access to exclusive content!</div>
+	<div id="become-member"id="site-modalBtn" onclick="disappearBar()" onclick="myFunction()">Become a Dom Perignon House Member to gain access to exclusive content!</div>
 
 </div>
 </div>
-</body>
+</div>
 
 <!-- LENNY FOOTER -->
 
@@ -187,7 +198,7 @@
 </div>
 
 
-</body>
+
 <!--PAGE CONTENT ENDS HERE-->
 </div>
 
@@ -221,6 +232,9 @@ var buttonInfo = document.querySelector("#buttonInfo");
       buttonBuy.addEventListener("click", changeText);
       addtocart.addEventListener("click", addtoCart);
 
+
+//SHOWS NUMBER OF BOTTLES IN CART
+
       function showCart(){
         var cartInfo = "";
         if(shoppingcart[0] != 0){
@@ -241,6 +255,8 @@ var buttonInfo = document.querySelector("#buttonInfo");
         }
         alert(cartInfo);      
       }
+
+//CHANGES THE INFO PARAGRAPH TEXT 
       function changeText ()
       {
 
@@ -265,6 +281,8 @@ var buttonInfo = document.querySelector("#buttonInfo");
           buttonCart.style.display = "inline";
         } 
       } 
+
+//ADDS BOTTLES + VINTAGES TO CART
 
       function addtoCart ()
       {
@@ -292,6 +310,56 @@ var buttonInfo = document.querySelector("#buttonInfo");
         }         
 
       }
+
+
+
+
+function disappearBar()
+		{
+			document.querySelector('#become-member').style.display="none";
+		}
+		function myFunction() {
+	  	alert("Hello! I am an alert box!");
+		}
+
+
+
+
+//MODAL FORM
+	var modal = document.getElementById("site-modal");
+	var openBtn = document.getElementById("site-modalBtn");
+	var submit = document.getElementById("submit");
+	var closeSpan = document.getElementsByClassName("site-modalClose")[0];
+	//On "submit" button click, runs function to check if allergies were selected
+	submit.addEventListener("click", checkAllergy);
+	//Displays the modal
+	openBtn.onclick = function() {
+		modal.style.display = "block";
+	}
+	//Hides modal when close button is clicked
+	closeSpan.onclick = function() {
+		modal.style.display = "none";
+	}
+	//Hides modal when anywhere other than modal is clicked
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+			}
+	}
+	//Checks if allergies were selected, hides old text, displays new text, and closes modal.
+	function checkAllergy() {
+		var checkBox = document.getElementById("allergies");
+		var textCur = document.getElementById("current");
+		var textNew = document.getElementById("new");
+		if (checkBox.checked == true){
+			textCur.style.display = "none";
+			textNew.style.display = "block";
+			modal.style.display = "none";
+	//If allergies were not selected, close modal 
+  		} else {
+  			modal.style.display = "none";
+  		}
+	}
 // ADD YOUR PAGE-SEPCIFIC JAVASCRIPT HERE
 </script>
 

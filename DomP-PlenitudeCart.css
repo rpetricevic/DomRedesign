@@ -1,75 +1,88 @@
 #p2-body {
-	background-image: url("assets/product/bg_gold.jpg");
-	background-size: contain;
+  background-image: url("assets/product/bg_gold.jpg");
+  background-repeat: repeat;
 }
 
 .p2-h1 {
-	font-family:'Libre Baskerville', serif;
-	font-size:75px;
-	color: white;
-}
-
-.p2-h2 {
-    font-family:'Lato', sans-serif;
-    font-style: 15px;
-    color: white;
+  font-family:'Libre Baskerville', serif;
+  font-size:75px;
+  color: white;
 }
 
 .p2-h3 {
-    font-family:'Lato', sans-serif;
-    font-style: 15px;
-    color: white;
+  font-family:'Libre Baskerville', serif;
+  font-size:30px;
+  color: white;
 }
 
-p {
-	font-family:'Lato', sans-serif;
-	color: white;
-	text-align: left;
+.p2-p {
+  font-family:'Libre Baskerville', serif;
+  font-size:10px;
+  color: white;
 }
 
-/*.p2-mainrow {
-  padding-top: 50px;
-  padding-left: 10vw;
-  text-align: left;
-  width: 100%;
-  height: 
-
-}*/
+.p2-mainrow {
+  padding-top: 40px;
+    padding-left: 10vw;
+}
 
 .p2-maincolumn {
-  padding-top: 40px;
-  padding-left: 10vw;
+  margin: 0px 0px 40px 0px;
 }
 
-.p2-row {
-  padding-top: 50px;
-  padding-left: 10vw;
-  width: 25%;
-}
-
-#p2-column {
-	float: left;	
-  align-content: center;	
-  width: 25%;
-  padding-top: 10%;
-  padding-right: 5vw;
-  text-align: left;
-  background-color: transparent;
+.p2-inforow {
+    padding-left: 10vw;
 }
 
 .p2-infocolumn {
-	float: left;	
-  	align-content: left;	
-  	width: 50%;
-  	text-align: left;
-    background-color: transparent;
+  float: left;
+    align-content: left;  
+    width: 25%;
+    text-align: left;
+}
+
+.p2-lennyheader{
+  background-image: url("assets/product/bg_assemblage.jpg");
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;  
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    margin:40px 40px 40px 40px;
+    
+}
+
+img {
+  position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: -50;
+}
 
 
+.lenny-column {
+  display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    width:50%;
+    padding: 10px; 
+}
+
+
+.p2-lennyh3 {
+  font-family:'Libre Baskerville', serif;
+  font-size:30px;
+  color: white;
 }
 
 button.site-basicBtn {
   background-color:#8D7E3B;
-  border-radius:15px;
+  border-radius:10px;
   padding:6px 14px;
   font-family:'Libre Baskerville', serif;
   font-size:10px;
@@ -87,46 +100,48 @@ select.p2-dropdown {
   border-radius:15px;
   padding:6px 14px;
   font-family:'Libre Baskerville', serif;
-  font-size:10px;
+  font-size:15px;
   color:white;
   text-decoration: none;
 }
 
-/*#LennyEdition {
-  background-image: url("assets/product/bg_assemblage.jpg");
-  background-position: center;
-  background-size: contain; 
-}*/
-
-h3.p2-lennyheader {
-	font-family:'Libre Baskerville', serif;
-	font-size:15px;
-	color: white;
+{
+  box-sizing: content-box;
+  float: center;
 }
 
-.show {display:block;}
-
-.lennyfooter-row {
-  background-image: url("assets/product/bg_assemblage.jpg");
-  background-position: center;
-  background-size: contain; 
-  align-content: center;  
-  width: 100%;
-  text-align: center;
-  position: relative;
+img{
+  margin: 5px; 
+  float:center;
 }
 
-.lenny-column {
-  float: left;	
-  align-content: center;	
+{
+box-sizing: border-box;
+}
+
+.img-column {
+  float: left;
   width: 30%;
   padding: 5px;
-  text-align: center;
-  position: relative;
+  column-rule-style: dotted;
+  column-rule-color: #9b8632;
+} 
 
+.img-row {
+  display:flex;
+    flex-wrap:wrap;
+   justify-content:center;
+   text-align:center;
+    color:white;
+   margin:0 40px 40px 40px;
 }
 
-/* Clear floats after the columns */
+.img-row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 .row:after {
   content: "";
   display: table;
@@ -137,4 +152,3 @@ h3.p2-lennyheader {
 @media screen and (max-width:100%) {
   .column {
     width: 100%;
-
