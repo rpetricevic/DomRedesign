@@ -5,7 +5,7 @@
 }
 .index-carSlide {
   background-color:white;
-  height:541px;
+  height:540px;
   margin-bottom:40px;
 }
 .index-carPrev, .index-carNext {
@@ -44,13 +44,13 @@
   background-color:#746522;
 }
 .index-carContent {
-  width:35%;
+  width:48%;
   float:right;
-  margin-right:140px;
+  margin-right:100px;
   padding-top:88px;
 }
 @media screen and (max-width: 900px) {
-  .index-carContent h1 {font-size:22px;}
+  .index-carContent h1 {font-size:24px;}
 }
 a.index-button {
   background-color:black;
