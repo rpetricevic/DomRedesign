@@ -104,6 +104,10 @@ select.p2-dropdown {
   color:white;
   text-decoration: none;
 }
+select:hover.p2-dropdown {
+  background-color:#E5D286;
+  color:black;
+}
 
 {
 	box-sizing: content-box;
@@ -152,3 +156,4 @@ box-sizing: border-box;
 @media screen and (max-width:100%) {
   .column {
     width: 100%;
+  }
