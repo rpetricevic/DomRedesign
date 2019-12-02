@@ -35,23 +35,14 @@
 		<span class="site-modalClose">&times;</span>
 		<h2>Membership Form</h2>
 		<p>Vivamus dui tellus, tincidunt non ipsum in, sagittis pretium libero. Nam sem risus, tincidunt eget mauris a, aliquet facilisis lectus</p>
-		<p><span style="color:red;">*</span> Field is required</p>
-		<form>
 			<h3>Name:</h3>
   			<input type="text" name="name" class="site-modalTextField">
-  			<h3>Email Address: <span style="color:red;">*</span></h3>
-  			<input type="text" name="email" class="site-modalTextField" required>
-  			<h3>Food Allergies:</h3>
-  			<table>
-  				<tr>
-  					<td><input type="checkbox" name="allergies" value="peanuts" id="nuts"> Peanuts</td>
-  					<td><input type="checkbox" name="allergies" value="dairy"> Dairy</td>
-  					<td><input type="checkbox" name="allergies" value="broccoli"> Broccoli</td>
-  				</tr>
-  			</table>
-  			<input type="submit" value="Submit" class="site-modalSubmit" onclick="checkPeanuts()"><br>
+  			<h3>Email Address:</h3>
+  			<input type="text" name="email" class="site-modalTextField">
+  			&nbsp;<br>
+  			<h3>Food Allergies? <input type="checkbox" id="allergies"></h3>
+  			<input type="button" value="Submit" class="site-modalSubmit" id="submit"><br>
   			&nbsp;
-		</form>
 	</div>
 </div>
 
@@ -205,7 +196,10 @@
 	//MODAL FORM
 	var modal = document.getElementById("site-modal");
 	var openBtn = document.getElementById("site-modalBtn");
+	var submit = document.getElementById("submit");
 	var closeSpan = document.getElementsByClassName("site-modalClose")[0];
+
+submit.addEventListener("click", checkAllergy);
 
 	openBtn.onclick = function() {
 		modal.style.display = "block";
@@ -219,17 +213,14 @@
 			modal.style.display = "none";
 			}
 	}
-	function checkPeanuts() {
-		var checkBox = document.getElementById("nuts");
+	function checkAllergy() {
+		var checkBox = document.getElementById("allergies");
 		var textCur = document.getElementById("current");
 		var textNew = document.getElementById("new");
 		if (checkBox.checked == true){
 			textCur.style.display = "none";
 			textNew.style.display = "block";
-			modal.style.display = "none"
-  		} else {
-    		textNew.style.display = "none";
-    		textCur.style.display = "block";
+			modal.style.display = "none";
   		}
 	}
 </script>
