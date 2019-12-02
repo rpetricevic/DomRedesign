@@ -31,7 +31,7 @@
 
 <!-------------------------------- Life w Dom container -------------------------->
 	
-	<img class="containerImg" src="assets/life/logo_lifeWithDom-lrg.png" style="top: 12%;left:10%;width: 40vw; z-index: 1;"></img>
+	<img class="containerImg" src="assets/life/logo_lifeWithDom-lrg.png" style="top: 20%;left:10%;width: 40vw; z-index: 1;"></img>
 	<div class="container">
 
 		<img src="assets/life/img_feature.jpg" >
@@ -132,15 +132,14 @@
 	<div class="site-modalContent">
 		<span class="site-modalClose">&times;</span>
 		<h2>Membership Form</h2>
-		<p>Vivamus dui tellus, tincidunt non ipsum in, sagittis pretium libero. Nam sem risus, tincidunt eget mauris a, aliquet facilisis lectus</p>
+		<p>Please register your name and email address to recieve weekly newsletters from Dom Pergnon. You can cancel anytime if you decide to do so.</p>
 			<h3>Name:</h3>
   			<input type="text" name="name" class="site-modalTextField">
   			<h3>Email Address:</h3>
   			<input type="text" name="email" class="site-modalTextField">
   			&nbsp;<br>
-  			<h3>Food Allergies? <input type="checkbox" id="allergies"></h3>
   			<input type="button" value="Submit" class="site-modalSubmit" id="submit"><br>
-  			&nbsp;
+  			
 	</div>
 </div>
 
@@ -169,13 +168,12 @@
 	<div class="site-modalContent">
 		<span class="site-modalClose">&times;</span>
 		<h2>Membership Form</h2>
-		<p>Vivamus dui tellus, tincidunt non ipsum in, sagittis pretium libero. Nam sem risus, tincidunt eget mauris a, aliquet facilisis lectus</p>
+		<p>Please register your name and email address to recieve weekly newsletters from Dom Pergnon. You can cancel anytime.</p>
 			<h3>Name:</h3>
   			<input type="text" name="name" class="site-modalTextField">
   			<h3>Email Address:</h3>
   			<input type="text" name="email" class="site-modalTextField">
   			&nbsp;<br>
-  			<h3>Food Allergies? <input type="checkbox" id="allergies"></h3>
   			<input type="button" value="Submit" class="site-modalSubmit" id="submit"><br>
   			&nbsp;
 	</div>
@@ -284,17 +282,9 @@
 			}
 			//Checks if allergies were selected, hides old text, displays new text, and closes modal.
 			function checkAllergy() {
-				var checkBox = document.getElementById("allergies");
-				var textCur = document.getElementById("current");
-				var textNew = document.getElementById("new");
-				if (checkBox.checked == true){
-					textCur.style.display = "none";
-					textNew.style.display = "block";
-					modal.style.display = "none";
-			//If allergies were not selected, close modal 
-		  		} else {
+				
 		  			modal.style.display = "none";
-		  		}
+		  		
 			}
 
 
