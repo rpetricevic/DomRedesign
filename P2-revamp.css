@@ -47,7 +47,6 @@
   	background-size: contain;
   	background-repeat: no-repeat;  
   	display:flex;
-  	flex-wrap:wrap;
   	justify-content:center;
   	text-align:center;
   	color:white;
@@ -55,17 +54,8 @@
   	
 }
 
-img {
-	position: relative;
-  	left: 0px;
-  	top: 0px;
-  	z-index: -50;
-}
-
 
 .lenny-column {
-	display:flex;
-  	flex-wrap:wrap;
   	justify-content:center;
   	text-align:center;
   	color:white;
