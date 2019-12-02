@@ -176,8 +176,9 @@ a:hover.site-basicBtn {
 	font-size:18px;
 	text-decoration: none;
 }
-.site-modalSubmit:hover {
+.site-modalSubmit:hover, .site-modalSubmit:focus {
   	cursor:pointer;
+  	outline:none;
   	background-color:black;
   	color:white;
 }
