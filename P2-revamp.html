@@ -7,7 +7,7 @@
   	<meta name="description" content="MDM Student website redesign">
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Lato|Libre+Baskerville&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="site-style.css">
-	<link rel="stylesheet" type="text/css" href="DomP-PlenitudeCart.css">
+	<link rel="stylesheet" type="text/css" href="P2-revamp.css">
 </head>
 <body>
 
@@ -26,22 +26,25 @@
 </div>
 
 <div id="site-main">
-<!-- new header -->
-
 <!--PAGE CONTENT STARTS HERE-->
 
 <body id = "p2-body">
-	<!-- <div class = "p2-mainrow"> -->
+
+	<!-- PLENITUDE HEADER -->
+
+	<div class = "p2-mainrow">
 		<div class = "p2-maincolumn">
 				<h1 class = "p2-h1">Plénitude 2</h1>
-  				<button id= "buttonInfo", class= "site-basicBtn">Info</button>|<button id= "buttonBuy", class= "site-basicBtn">Buy</button>
+  				<button id= "buttonInfo", class= "site-basicBtn">Info</button>|
+  				<button id= "buttonBuy", class= "site-basicBtn">Buy</button>
 		</div>
-	<!-- </div> -->
+	</div>
 
-	<div class = "p2-row">
+<!-- INFO -->
+	<div class = "p2-inforow">
 		<div class = "p2-infocolumn">
-  			<h3 class = "p2-h3" id = "h3-p2">Dom Perignon elevated to its second life</h3>
-			<p id ="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<h3 class = "p2-h3" id = "p2-h3">Dom Perignon elevated to its second life</h3>
+				<p class = "p2-p" id ="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
 		</div>
 
 		<div class = "p2-infocolumn">
@@ -52,7 +55,7 @@
     			<option value="2000">2000</option>
     			<option id="2001" value="2001">2001</option>
   			</select>
-  			<br>
+  				<br>
 
   			<select id="quantity" class = "p2-dropdown">
    				<option value="SelectBottle">Select Quantity</option>
@@ -61,23 +64,39 @@
     			<option value="3">3</option>
     			<option value="4">4</option>
   			</select>
- 			 <br/><br/>
-        	
-        	<button id= "addtocart" class = "site-basicBtn">Add to Cart</button>
+  			 <br/><br/>
+
+  			<button id= "addtocart" class = "site-basicBtn">Add to Cart</button>
 
        		 <br/><br/>
 
 			<button id= "buttonCart" class= "site-basicBtn"> Show Cart</button>
   		</div>
-</div>
+	</div>
+
+<!-- BOTTLE -->
 
 	<div class = "p2-maincolumn" id = "p2-maincolumn">
-		<img src="assets/product/img_bottle.png">
+		<img src="assets/product/img_bottle.png" >
 	</div>
 </div>
 
-  		<!-- ADD IN MAELISS' CODE HERE -->
 
+<!-- THREE STATIC IMAGES -->
+
+<div class="img-row">
+	<div class="img-column">
+		<img src="assets/product/photo01.jpg" alt="holding champagne glass" style="width:100%;">
+	</div>
+	<div class="img-column">
+		<img src="assets/product/photo02.jpg" alt="tray of champagne" style="width:100%;">
+	</div>
+	<div class="img-column">
+		<img src="assets/product/photo03.jpg" alt="a toast" style="width:100%">
+	</div>
+</div>
+
+<!-- MEMBERS REVIEWS -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Membership Exclusives</title>
@@ -110,14 +129,14 @@
 				<span class="fa fa-star checked"></span>
 				<span class="fa fa-star checked"></span>
 				<span class="fa fa-star"></span>
-			<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
+					<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
 
 							<a href="#" class="site-basicBtn">Read More</a>
 			    
-			  </div>
+			 </div>
 
-			  <div class="column">
+			<div class="column">
 			    <h2>On The Palate</h2>
 			    <h3>Douglas Restauranteur</h3>
 			    <span class="fa fa-star checked"></span>
@@ -125,12 +144,13 @@
 				<span class="fa fa-star checked"></span>
 				<span class="fa fa-star"></span>
 				<span class="fa fa-star"></span>
-			<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-			</p>
-			<a href="#" class="site-basicBtn">Read More</a>
-			  </div>
-			  <div class="column">
+				<a href="#" class="site-basicBtn">Read More</a>
+
+			</div>
+
+			<div class="column">
 			    <h2>Food Pairings</h2>
 			    <h3> Amelia Collector</h3>
 			    <span class="fa fa-star"></span>
@@ -138,10 +158,9 @@
 			    <span class="fa fa-star"></span>
 				<span class="fa fa-star"></span>
 				<span class="fa fa-star"></span>
-			<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
-			<a href="#" class="site-basicBtn">Read More</a>
-	</div>
+					<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+				<a href="#" class="site-basicBtn">Read More</a>
+			</div>
 
 	<div id="become-member" onclick="disappearBar()" onclick="myFunction()">Become a Dom Perignon House Member to gain access to exclusive content!</div>
 
@@ -149,36 +168,36 @@
 </div>
 </body>
 
-  		<!-- END MAELISS CODE -->
+<!-- LENNY FOOTER -->
 
-  		<div class = "lennyfooter-row" id ="LennyEdition">
-  			<div class = "lenny-column" id ="p2-footer-lennyheader">
-  				<h3 class = "p2-lennyheader"> Limited Edition Lenny Kravitz Label</h3>
-  			</div>
+<div class = "p2-lennyheader">	
 
-  			<div class = "lenny-column" id ="p2-footer-lennyheader">
-  				<p class = "p2-p">Lenny Kravitz elevates the iconic Dom Pérignon label with the creation of limited editions of the Vintage 2008 and Rosé Vintage 2006.</p>
-  			</div>
-
-  			<div class = "lenny-column" id ="p2-footer-lennyheader">
-  				<img src = "assets/kravitz_white.png"> </img>
-  					<button class = "site-basicBtn"> Read More </button>
-  				</div>
-  			</div>
+  		<div class = "lenny-column">
+  			<h3 class = "p2-lennyh3"> Limited Edition Lenny Kravitz Label</h3>
   		</div>
 
+  		<div class = "lenny-column">
+  			<p class = "p2-p">Lenny Kravitz elevates the iconic Dom Pérignon label with the creation of limited editions of the Vintage 2008 and Rosé Vintage 2006.</p>
+  		</div>
+
+  		<div class = "lenny-column">
+  			<img src = "assets/kravitz_white.png"> </img>
+  					<button class = "site-basicBtn"> Read More </button>
+  		</div>
+</div>
+
+
 </body>
-
-
 <!--PAGE CONTENT ENDS HERE-->
 </div>
+
+<!--FOOTER-->
 <div class="site-footer">
 	<a href="index.html">Home</a>|<a href="#">About</a>|<a href="DomP-PlenitudeCart.html">Product</a>|<a href="LifeWDom.html">Sponsored Artists &amp; Events</a>|<a href="#">Membership</a>|<a href="#">Contact Us</a>|<a href="#">Languages</a>|<a href="#">Legal</a>
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec accumsan tellus. In quis elit vel tortor eleifend tempus.</p>
 </div>
 
 <!--JAVASCRIPT-->
-
 <script>
 	function openMenu() {
   		document.getElementById("site-menu").style.height = "88px";
@@ -186,7 +205,8 @@
 	function closeMenu() {
   		document.getElementById("site-menu").style.height = "0px";
 		}
-      var buttonInfo = document.querySelector("#buttonInfo"); 
+
+var buttonInfo = document.querySelector("#buttonInfo"); 
       var buttonBuy = document.querySelector("#buttonBuy");
       var buttonCart = document.querySelector("#buttonCart");
 
@@ -272,6 +292,7 @@
         }         
 
       }
+// ADD YOUR PAGE-SEPCIFIC JAVASCRIPT HERE
 </script>
 
 </body>
