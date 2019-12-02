@@ -183,12 +183,15 @@
 		var dots = document.getElementsByClassName("index-carDot");
 			if (n > slides.length) {slideNum = 1}
 			if (n < 1) {slideNum = slides.length}
+			//Hides the inactive slides
 			for (i = 0; i < slides.length; i++) {
 			    slides[i].style.display = "none";
 			}
+			//Makes all but the current dot inactive
 			for (i = 0; i < dots.length; i++) {
 			    dots[i].className = dots[i].className.replace(" dotActive", "");
 			}
+			//Displays current slide and makes current dot active
 				slides[slideNum-1].style.display = "block";
 				dots[slideNum-1].className += " dotActive";
 		}
@@ -198,21 +201,23 @@
 	var openBtn = document.getElementById("site-modalBtn");
 	var submit = document.getElementById("submit");
 	var closeSpan = document.getElementsByClassName("site-modalClose")[0];
-
-submit.addEventListener("click", checkAllergy);
-
+	//On "submit" button click, runs function to check if allergies were selected
+	submit.addEventListener("click", checkAllergy);
+	//Displays the modal
 	openBtn.onclick = function() {
 		modal.style.display = "block";
 	}
-
+	//Hides modal when close button is clicked
 	closeSpan.onclick = function() {
 		modal.style.display = "none";
 	}
+	//Hides modal when anywhere other than modal is clicked
 	window.onclick = function(event) {
 		if (event.target == modal) {
 			modal.style.display = "none";
 			}
 	}
+	//Checks if allergies were selected, hides old text, displays new text, and closes modal.
 	function checkAllergy() {
 		var checkBox = document.getElementById("allergies");
 		var textCur = document.getElementById("current");
@@ -221,6 +226,7 @@ submit.addEventListener("click", checkAllergy);
 			textCur.style.display = "none";
 			textNew.style.display = "block";
 			modal.style.display = "none";
+	//If allergies were not selected, close modal 
   		} else {
   			modal.style.display = "none";
   		}
