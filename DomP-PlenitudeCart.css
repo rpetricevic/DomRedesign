@@ -1,83 +1,83 @@
 #p2-body {
-	background-image: url("assets/product/bg_gold.jpg");
-	background-repeat: repeat;
+  background-image: url("assets/product/bg_gold.jpg");
+  background-repeat: repeat;
 }
 
 .p2-h1 {
-	font-family:'Libre Baskerville', serif;
-	font-size:75px;
-	color: white;
+  font-family:'Libre Baskerville', serif;
+  font-size:75px;
+  color: white;
 }
 
 .p2-h3 {
-	font-family:'Libre Baskerville', serif;
-	font-size:30px;
-	color: white;
+  font-family:'Libre Baskerville', serif;
+  font-size:30px;
+  color: white;
 }
 
 .p2-p {
-	font-family:'Libre Baskerville', serif;
-	font-size:10px;
-	color: white;
+  font-family:'Libre Baskerville', serif;
+  font-size:10px;
+  color: white;
 }
 
 .p2-mainrow {
-	padding-top: 40px;
-  	padding-left: 10vw;
+  padding-top: 40px;
+    padding-left: 10vw;
 }
 
 .p2-maincolumn {
-	margin: 0px 0px 40px 0px;
+  margin: 0px 0px 40px 0px;
 }
 
 .p2-inforow {
-  	padding-left: 10vw;
+    padding-left: 10vw;
 }
 
 .p2-infocolumn {
-	float: left;
-  	align-content: left;	
-  	width: 25%;
-  	text-align: left;
+  float: left;
+    align-content: left;  
+    width: 25%;
+    text-align: left;
 }
 
 .p2-lennyheader{
-	background-image: url("assets/product/bg_assemblage.jpg");
-  	background-position: right;
-  	background-size: contain;
-  	background-repeat: no-repeat;  
-  	display:flex;
-  	flex-wrap:wrap;
-  	justify-content:center;
-  	text-align:center;
-  	color:white;
-  	margin:40px 40px 40px 40px;
-  	
+  background-image: url("assets/product/bg_assemblage.jpg");
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;  
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    margin:40px 40px 40px 40px;
+    
 }
 
 img {
-	position: relative;
-  	left: 0px;
-  	top: 0px;
-  	z-index: -50;
+  position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: -50;
 }
 
 
 .lenny-column {
-	display:flex;
-  	flex-wrap:wrap;
-  	justify-content:center;
-  	text-align:center;
-  	color:white;
-  	width:50%;
-  	padding: 10px; 
+  display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    width:50%;
+    padding: 10px; 
 }
 
 
 .p2-lennyh3 {
-	font-family:'Libre Baskerville', serif;
-	font-size:30px;
-	color: white;
+  font-family:'Libre Baskerville', serif;
+  font-size:30px;
+  color: white;
 }
 
 button.site-basicBtn {
@@ -106,13 +106,13 @@ select.p2-dropdown {
 }
 
 {
-	box-sizing: content-box;
-	float: center;
+  box-sizing: content-box;
+  float: center;
 }
 
 img{
-	margin: 5px; 
-	float:center;
+  margin: 5px; 
+  float:center;
 }
 
 {
@@ -128,12 +128,12 @@ box-sizing: border-box;
 } 
 
 .img-row {
-	display:flex;
-  	flex-wrap:wrap;
- 	 justify-content:center;
- 	 text-align:center;
-  	color:white;
- 	 margin:0 40px 40px 40px;
+  display:flex;
+    flex-wrap:wrap;
+   justify-content:center;
+   text-align:center;
+    color:white;
+   margin:0 40px 40px 40px;
 }
 
 .img-row::after {
