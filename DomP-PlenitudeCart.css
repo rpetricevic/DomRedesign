@@ -17,17 +17,16 @@
 
 .p2-p {
   font-family:'Libre Baskerville', serif;
-  font-size:10px;
-  color: white;
+  font-size:100px;
+  color: black;
 }
 
 .p2-mainrow {
-  padding-top: 40px;
     padding-left: 10vw;
 }
 
 .p2-maincolumn {
-  margin: 0px 0px 40px 0px;
+  height: 10%;
 }
 
 .p2-inforow {
@@ -37,7 +36,7 @@
 .p2-infocolumn {
   float: left;
     align-content: left;  
-    width: 25%;
+    width: 40%;
     text-align: left;
 }
 
@@ -152,3 +151,4 @@ box-sizing: border-box;
 @media screen and (max-width:100%) {
   .column {
     width: 100%;
+  }

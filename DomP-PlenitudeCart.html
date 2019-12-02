@@ -23,7 +23,7 @@
 </div>
 
 <!--HEADER-->
-<div id="site-header">
+<div id="site-header" style="height: 88px;">
 	<img id="site-burger" src="assets/btn_menu-hamburger.png" alt="Open Menu" onclick="openMenu()">
 	<a href="index.html"><img class="site-domLogo" src="assets/logo_domPerignon.png" alt="Dom Pérignon"></a>
 </div>
@@ -66,7 +66,7 @@
 	<div class = "p2-inforow">
 		<div class = "p2-infocolumn">
 			<h3 class = "p2-h3" id = "p2-h3">Dom Perignon elevated to its second life</h3>
-				<p class = "p2-p" id ="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+				<p class = "p2-p" id ="description">The first vintage of Dom Pérignon was 1921 and was only released for sale in 1936, sailing to New York in the liner Normandie.[3] The brand, not exploited, was given by Champagne Mercier to Moët in 1927 for a wedding between the two families. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. The first vintage of Dom Pérignon was 1921 and was only released for sale in 1936, sailing to New York in the liner Normandie.[3] The brand, not exploited, was given by Champagne Mercier to Moët in 1927 for a wedding between the two families.</p> 
 		</div>
 
 		<div class = "p2-infocolumn">
@@ -229,6 +229,10 @@ var buttonInfo = document.querySelector("#buttonInfo");
       var quantity = document.querySelector("#quantity");
       var addtocart = document.querySelector("#addtocart");
       var shoppingcart= [0,0,0,0];
+                vintage.style.display = "none";
+          quantity.style.display = "none";
+          addtocart.style.display = "none";
+          buttonCart.style.display = "none";
 
       buttonInfo.addEventListener("click", changeText); 
       buttonCart.addEventListener("click",showCart);
@@ -265,7 +269,7 @@ var buttonInfo = document.querySelector("#buttonInfo");
 
         if (this.id == "buttonInfo")
         {
-          description.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat";
+          description.textContent = "The first vintage of Dom Pérignon was 1921 and was only released for sale in 1936, sailing to New York in the liner Normandie.[3] The brand, not exploited, was given by Champagne Mercier to Moët in 1927 for a wedding between the two families. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. The first vintage of Dom Pérignon was 1921 and was only released for sale in 1936, sailing to New York in the liner Normandie.[3] The brand, not exploited, was given by Champagne Mercier to Moët in 1927 for a wedding between the two families.";
 
           vintage.style.display = "none";
           quantity.style.display = "none";
@@ -276,7 +280,7 @@ var buttonInfo = document.querySelector("#buttonInfo");
 
         else if (this.id == "buttonBuy")
         {
-          description.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+          description.textContent = "Dom is pretty misunderstood. I remember first trying it and saying meh. Whats the hype? I too, thought it was totally overrated.Truth is, its great champagne, and easily one of the best available. But its not meant to be drunk young. It needs to be treated like good Bordeaux, Barolo, and the wines of JJ Prum - barely worth the money for the first 15 years of its life.In that regard, it would make a great wedding / future anniversary gift, if you are confident they have proper storage. For immediate consumption, I'd opt for something else.";
 
           vintage.style.display = "inline";
           quantity.style.display = "inline";
