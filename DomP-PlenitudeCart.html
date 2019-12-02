@@ -31,18 +31,18 @@
 <div id="site-main">
 <!--PAGE CONTENT STARTS HERE-->
 
-<!-- MODAL FORM -->
+<!--MODAL FORM-->
 <div id="site-modal">
 	<div class="site-modalContent">
 		<span class="site-modalClose">&times;</span>
 		<h2>Membership Form</h2>
 		<p>Vivamus dui tellus, tincidunt non ipsum in, sagittis pretium libero. Nam sem risus, tincidunt eget mauris a, aliquet facilisis lectus</p>
-			<h3>Name:</h3>
+			<h3 style="color:black;">Name:</h3>
   			<input type="text" name="name" class="site-modalTextField">
-  			<h3>Email Address:</h3>
+  			<h3 style="color:black;">Email Address:</h3>
   			<input type="text" name="email" class="site-modalTextField">
   			&nbsp;<br>
-  			<h3>Food Allergies? <input type="checkbox" id="allergies"></h3>
+  			<h3 style="color:black;">Food Allergies? <input type="checkbox" id="allergies"></h3>
   			<input type="button" value="Submit" class="site-modalSubmit" id="submit"><br>
   			&nbsp;
 	</div>
@@ -140,14 +140,14 @@
 				<span class="fa fa-star checked"></span>
 				<span class="fa fa-star checked"></span>
 				<span class="fa fa-star"></span>
-					<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					</p>
+			<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
 
-							<a href="#" class="site-basicBtn">Read More</a>
+							<a href="#" class="button">Read More</a>
 			    
-			 </div>
+			  </div>
 
-			<div class="column">
+			  <div class="column">
 			    <h2>On The Palate</h2>
 			    <h3>Douglas Restauranteur</h3>
 			    <span class="fa fa-star checked"></span>
@@ -155,25 +155,28 @@
 				<span class="fa fa-star checked"></span>
 				<span class="fa fa-star"></span>
 				<span class="fa fa-star"></span>
-					<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-				<a href="#" class="site-basicBtn">Read More</a>
-
-			</div>
-
-			<div class="column">
+			</p>
+			<a href="#" class="button">Read More</a>
+			  </div>
+			  <div class="column">
 			    <h2>Food Pairings</h2>
-			    <h3> Amelia Collector</h3>
+			    <h3 id="currentName">Amelia Collector</h3>
+			    <h3 id="newName" style="display:none;">Gluton Peanutfriend</h3>
 			    <span class="fa fa-star"></span>
 				<span class="fa fa-star"></span>
 			    <span class="fa fa-star"></span>
 				<span class="fa fa-star"></span>
 				<span class="fa fa-star"></span>
-					<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-				<a href="#" class="site-basicBtn">Read More</a>
-			</div>
+			<p class="paragraph" id="currentPar">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<p class="paragraph"id="newPar" style="display:none;">OMG this has no peanuts or gluten or anything you'd be allergic to and it tastes really good and you should totally make it! Super allergy freiendly and delicious!
+			</p>
+			<a href="#" class="button">Read More</a>
+	</div>
 
-	<div id="become-member"id="site-modalBtn" onclick="disappearBar()" onclick="myFunction()">Become a Dom Perignon House Member to gain access to exclusive content!</div>
+<button id="become-member" onclick="disappearBar()">Become a Dom Perignon House Member to gain access to exclusive content!</button>
 
 </div>
 </div>
@@ -313,21 +316,9 @@ var buttonInfo = document.querySelector("#buttonInfo");
 
 
 
-
-function disappearBar()
-		{
-			document.querySelector('#become-member').style.display="none";
-		}
-		function myFunction() {
-	  	alert("Hello! I am an alert box!");
-		}
-
-
-
-
 //MODAL FORM
 	var modal = document.getElementById("site-modal");
-	var openBtn = document.getElementById("site-modalBtn");
+	var openBtn = document.getElementById("become-member");
 	var submit = document.getElementById("submit");
 	var closeSpan = document.getElementsByClassName("site-modalClose")[0];
 	//On "submit" button click, runs function to check if allergies were selected
@@ -349,18 +340,23 @@ function disappearBar()
 	//Checks if allergies were selected, hides old text, displays new text, and closes modal.
 	function checkAllergy() {
 		var checkBox = document.getElementById("allergies");
-		var textCur = document.getElementById("current");
-		var textNew = document.getElementById("new");
+		var nameCur = document.getElementById("currentName");
+		var nameNew = document.getElementById("newName");
+		var textCur = document.getElementById("currentPar");
+		var textNew = document.getElementById("newPar");
 		if (checkBox.checked == true){
+			nameCur.style.display = "none";
+			nameNew.style.display = "block";
 			textCur.style.display = "none";
 			textNew.style.display = "block";
 			modal.style.display = "none";
+			openBtn.style.display="none";
 	//If allergies were not selected, close modal 
   		} else {
   			modal.style.display = "none";
+  			openBtn.style.display="none";
   		}
 	}
-// ADD YOUR PAGE-SEPCIFIC JAVASCRIPT HERE
 </script>
 
 </body>
