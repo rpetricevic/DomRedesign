@@ -19,12 +19,9 @@ h3{font-family: PlantagenetCherokee;font-weight: lighter; color:#ffffff; text-al
 {
 	width: 80vw;
 	height: auto;
-
 	margin: 0 auto;
-
 	border: 2px solid #9b8632;
 	position: relative;
-
 
 }
 	
@@ -43,7 +40,7 @@ h3{font-family: PlantagenetCherokee;font-weight: lighter; color:#ffffff; text-al
 .maincolumn{
   width:25%;
   padding: 25px;
-  height: 350px;
+  height: 300vh;
   background-color:#9b8632;
 }
 
