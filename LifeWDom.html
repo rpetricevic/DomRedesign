@@ -1,31 +1,37 @@
+
 <!doctype html>
 <html>
 <head>
 	<meta charset="UTF-8">
+	<title>Dom P&eacute;rignon</title>
+  	<meta name="author" content="Stefan Grambart">
+  	<meta name="description" content="MDM Student website redesign">
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Lato|Libre+Baskerville&display=swap" rel="stylesheet">
-
+	<link rel="stylesheet" type="text/css" href="site-style.css">
 	<link rel="stylesheet" type="text/css" href="life.css">
 </head>
-
 <body>
+
+<!--NAVIGATION AND MENU-->
 <div id="site-menu">
 	<img id="site-closeBtn" src="assets/btn_menu-close.png" alt="Close Menu" onclick="closeMenu()"></a>
 	<div class="site-nav">
-		<a href="DomP-PlenitudeCart.html">Vintages</a>|<a href="LifeWDom.html">Life w Dom</a>|<a href="#">Our Spirit</a>|<a href="#">House Members</a>
+		<a href="DomP-PlenitudeCart.html">Vintages</a>|<a href="LifeWDom.html">Life w Dom</a>|<a href="#">Our Spirit</a>|<a href="#">Members</a>
 	</div>
 </div>
 
+<!--HEADER-->
 <div id="site-header">
 	<img id="site-burger" src="assets/btn_menu-hamburger.png" alt="Open Menu" onclick="openMenu()">
-	<a href="index.html"><img class="site-domLogo" src="assets/logo_domPerignon.png" alt="Dom Perignon"></a>
+	<a href="index.html"><img class="site-domLogo" src="assets/logo_domPerignon.png" alt="Dom P&eacute;rignon"></a>
 </div>
+
 <div id="site-main">
 <!--PAGE CONTENT STARTS HERE-->
 
-
-	<!-------------------------------- Life w Dom container -------------------------->
+<!-------------------------------- Life w Dom container -------------------------->
 	
-	<img class="containerImg" src="assets/life/logo_lifeWithDom-lrg.png" style="left:10%;width: 40vw; z-index: 1;"></img>
+	<img class="containerImg" src="assets/life/logo_lifeWithDom-lrg.png" style="top: 10%;left:10%;width: 40vw; z-index: 1;"></img>
 	<div class="container">
 
 		<img src="assets/life/img_feature.jpg" >
@@ -127,7 +133,7 @@
 			<img src="assets/index/logo_houseMember.png" alt="House Membership"></td>
 			<p>Join Dom P&eacute;rignon's membership program to access exclusive content on the site and earn rewards like invitations to our sponsored events.</p>
 			<p>Are you a restauranteur or sommelier? Become a certified member!</p>
-			<a href="#" class="index-memberBtn">Become a member.</a> <span class="index-newsletter">Or <a href="#">sign up</a> for our FREE monthly newsletter!</span>
+			<a href="#" class="index-memberBtn" id="membershipBTN">Become a member.</a> <span class="index-newsletter">Or <a href="#">sign up</a> for our FREE monthly newsletter!</span>
 		</div>
 
 		
@@ -158,15 +164,14 @@
 <!--JAVASCRIPT-->
 
 <script>
-	var letter = document.querySelector("#letter");
-        letter.addEventListener("click", letterClick);
+	var membershipBTN = document.querySelector("#membershipBTN");
+        membershipBTN.addEventListener("click", letterClick);
 
 
         function letterClick(){
         	  var txt;
-			  var person = prompt("Please enter your name:", "Lenny");
-			  if (person == null || person == "") {
-			    txt = "User cancelled the prompt.";
+			  var rest = prompt("Please choose if you have any nutritional restrictions:(Vegetarian,Lactose Intolerant,Kosher)", "N/A");
+			  if (rest != "Vegetarian" || rest != "Lactose Intolerant" || rest != "N/A" || rest != "Kosher") {
 			  } else {
 			    txt = "Hello " + person;
 			  }
