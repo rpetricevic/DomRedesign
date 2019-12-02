@@ -44,7 +44,8 @@
 .p2-lennyheader{
 	background-image: url("assets/product/bg_assemblage.jpg");
   	background-position: right;
-  	background-size: contain;  
+  	background-size: contain;
+  	background-repeat: no-repeat;  
   	display:flex;
   	flex-wrap:wrap;
   	justify-content:center;
@@ -106,6 +107,7 @@ select.p2-dropdown {
 
 {
 	box-sizing: content-box;
+	float: center;
 }
 
 img{
@@ -119,14 +121,34 @@ box-sizing: border-box;
 
 .img-column {
   float: left;
-  width: 19%;
+  width: 30%;
   padding: 5px;
   column-rule-style: dotted;
   column-rule-color: #9b8632;
 } 
+
+.img-row {
+	display:flex;
+  	flex-wrap:wrap;
+ 	 justify-content:center;
+ 	 text-align:center;
+  	color:white;
+ 	 margin:0 40px 40px 40px;
+}
 
 .img-row::after {
   content: "";
   clear: both;
   display: table;
 }
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:100%) {
+  .column {
+    width: 100%;
