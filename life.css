@@ -41,7 +41,7 @@ body{
   font-family:'Libre Baskerville', serif;
   font-size: 8vw;
   color:#E5D286;
-  font-weight: bold;  
+  font-weight: bold;
 }
 a.containerButton{
   position: absolute;
@@ -95,7 +95,7 @@ div.gallery
 
 div.gallery img {
 
-  width:30vw;
+  width:31.33vw;
   object-fit: cover;
 }
 
@@ -168,7 +168,14 @@ div.desc3-2{
 .index-newsletter {
   font-size:12px;
 }
-a.index-memberBtn {
+.index-newsletter a {
+  color:white;
+}
+.index-newsletter a:hover {
+  color:black;
+}
+
+a.index-button {
   background-color:black;
   border-radius: 15px;
   margin-right:6px;
@@ -178,14 +185,8 @@ a.index-memberBtn {
   color:white;
   text-decoration: none;
 }
-a:hover.index-memberBtn {
+a:hover.index-button {
   background-color:#E5D286;
-  color:black;
-}
-.index-newsletter a {
-  color:white;
-}
-.index-newsletter a:hover {
   color:black;
 }
 

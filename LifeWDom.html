@@ -13,7 +13,7 @@
 <body>
 
 <!--NAVIGATION AND MENU-->
-<div id="site-menu">
+<div id="site-menu" style="z-index: 3;">
 	<img id="site-closeBtn" src="assets/btn_menu-close.png" alt="Close Menu" onclick="closeMenu()"></a>
 	<div class="site-nav">
 		<a href="DomP-PlenitudeCart.html">Vintages</a>|<a href="LifeWDom.html">Life w Dom</a>|<a href="#">Our Spirit</a>|<a href="#">Members</a>
@@ -21,7 +21,7 @@
 </div>
 
 <!--HEADER-->
-<div id="site-header">
+<div id="site-header" style="z-index: 2; height: 88px;">
 	<img id="site-burger" src="assets/btn_menu-hamburger.png" alt="Open Menu" onclick="openMenu()">
 	<a href="index.html"><img class="site-domLogo" src="assets/logo_domPerignon.png" alt="Dom P&eacute;rignon"></a>
 </div>
@@ -31,7 +31,7 @@
 
 <!-------------------------------- Life w Dom container -------------------------->
 	
-	<img class="containerImg" src="assets/life/logo_lifeWithDom-lrg.png" style="top: 10%;left:10%;width: 40vw; z-index: 1;"></img>
+	<img class="containerImg" src="assets/life/logo_lifeWithDom-lrg.png" style="top: 12%;left:10%;width: 40vw; z-index: 1;"></img>
 	<div class="container">
 
 		<img src="assets/life/img_feature.jpg" >
@@ -90,7 +90,7 @@
 	<!---------------------------------LENNY------------------------------------------------>
 	<div class="container">
 
-		<img src="assets/life/bg_lenny.jpg" style="width: 90%;">
+		<img src="assets/life/bg_lenny.jpg" style="width: 94%;">
 		<div class="containerText" style="left: 15%; top:10%; font-size: 4.5vw;">Lenny Kravitz </div>
 	    <div class="containerText" style="left: 15%; top:28%; font-size: 2vw; color: white;">Creative Director </div>
 	    <a class="containerButton" style="left: 15%; top: 68%">Learn more</a>
@@ -125,15 +125,35 @@
 
 		</div>
 	</div>
+</div>
+
+<!--MODAL FORM-->
+<div id="site-modal">
+	<div class="site-modalContent">
+		<span class="site-modalClose">&times;</span>
+		<h2>Membership Form</h2>
+		<p>Vivamus dui tellus, tincidunt non ipsum in, sagittis pretium libero. Nam sem risus, tincidunt eget mauris a, aliquet facilisis lectus</p>
+			<h3>Name:</h3>
+  			<input type="text" name="name" class="site-modalTextField">
+  			<h3>Email Address:</h3>
+  			<input type="text" name="email" class="site-modalTextField">
+  			&nbsp;<br>
+  			<h3>Food Allergies? <input type="checkbox" id="allergies"></h3>
+  			<input type="button" value="Submit" class="site-modalSubmit" id="submit"><br>
+  			&nbsp;
+	</div>
+</div>
 
 	<!-------------------------------- NewsLetter -------------------------------------------->
-	<div class="container" id ="letter"></div>	
+	<br>
+	<br>
+	<br>
 
-		<div class="index-membership" style="width: 90vw; position: center;">
+		<div class="index-membership" style="width: 94vw; position: center;">
 			<img src="assets/index/logo_houseMember.png" alt="House Membership"></td>
 			<p>Join Dom P&eacute;rignon's membership program to access exclusive content on the site and earn rewards like invitations to our sponsored events.</p>
 			<p>Are you a restauranteur or sommelier? Become a certified member!</p>
-			<a href="#" class="index-memberBtn" id="membershipBTN">Become a member.</a> <span class="index-newsletter">Or <a href="#">sign up</a> for our FREE monthly newsletter!</span>
+			<a href="#" class="index-button" id="membershipBTN">Become a member.</a> <span class="index-newsletter">Or <a href="#">sign up</a> for our FREE monthly newsletter!</span>
 		</div>
 
 		
@@ -144,7 +164,22 @@
 
 
 
-
+<!--MODAL FORM-->
+<div id="site-modal">
+	<div class="site-modalContent">
+		<span class="site-modalClose">&times;</span>
+		<h2>Membership Form</h2>
+		<p>Vivamus dui tellus, tincidunt non ipsum in, sagittis pretium libero. Nam sem risus, tincidunt eget mauris a, aliquet facilisis lectus</p>
+			<h3>Name:</h3>
+  			<input type="text" name="name" class="site-modalTextField">
+  			<h3>Email Address:</h3>
+  			<input type="text" name="email" class="site-modalTextField">
+  			&nbsp;<br>
+  			<h3>Food Allergies? <input type="checkbox" id="allergies"></h3>
+  			<input type="button" value="Submit" class="site-modalSubmit" id="submit"><br>
+  			&nbsp;
+	</div>
+</div>
 
 
 
@@ -160,12 +195,14 @@
 	<a href="index.html">Home</a>|<a href="#">About</a>|<a href="DomP-PlenitudeCart.html">Product</a>|<a href="LifeWDom.html">Sponsored Artists &amp; Events</a>|<a href="#">Membership</a>|<a href="#">Contact Us</a>|<a href="#">Languages</a>|<a href="#">Legal</a>
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec accumsan tellus. In quis elit vel tortor eleifend tempus.</p>
 </div>
+</body>
+</html>
 
 <!--JAVASCRIPT-->
 
 <script>
-	var membershipBTN = document.querySelector("#membershipBTN");
-        membershipBTN.addEventListener("click", letterClick);
+	/*var membershipBTN = document.querySelector("#membershipBTN");
+        membershipBTN.addEventListener("click", letterClick);*/
 
 
         function letterClick(){
@@ -225,6 +262,40 @@
 		  dots[slideIndex-1].className += " active";
 		  setTimeout(loopSlides, 5000); // Change image every 2 seconds
 		}
+			var modal = document.getElementById("site-modal");
+			var openBtn = document.getElementById("membershipBTN");
+			var submit = document.getElementById("submit");
+			var closeSpan = document.getElementsByClassName("site-modalClose")[0];
+			//On "submit" button click, runs function to check if allergies were selected
+			submit.addEventListener("click", checkAllergy);
+			//Displays the modal
+			openBtn.onclick = function() {
+				modal.style.display = "block";
+			}
+			//Hides modal when close button is clicked
+			closeSpan.onclick = function() {
+				modal.style.display = "none";
+			}
+			//Hides modal when anywhere other than modal is clicked
+			window.onclick = function(event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+					}
+			}
+			//Checks if allergies were selected, hides old text, displays new text, and closes modal.
+			function checkAllergy() {
+				var checkBox = document.getElementById("allergies");
+				var textCur = document.getElementById("current");
+				var textNew = document.getElementById("new");
+				if (checkBox.checked == true){
+					textCur.style.display = "none";
+					textNew.style.display = "block";
+					modal.style.display = "none";
+			//If allergies were not selected, close modal 
+		  		} else {
+		  			modal.style.display = "none";
+		  		}
+			}
 
 
 
